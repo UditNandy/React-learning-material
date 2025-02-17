@@ -1,0 +1,18 @@
+.accordian-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordian-heading {
+  font: 16px;
+  font-weight: 700;
+}
+
+.accordian-content {
+  transition: 1s linear;
+}
+
+.accordian-header img {
+  cursor: pointer;
+}
