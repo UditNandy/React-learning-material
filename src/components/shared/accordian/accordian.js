@@ -6,13 +6,14 @@ const Accordian = ({ header, children }) => {
 
   return (
     <div className="wrapper">
-      <div className="accordian-header">
+      <div
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+        className="accordian-header"
+      >
         <div className="accordian-heading">{header}</div>
-        <div
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <div>
           {isOpen ? (
             <img src="./assets/icons/up-arrow.svg" alt="^" />
           ) : (
