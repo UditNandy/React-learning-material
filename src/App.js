@@ -8,6 +8,7 @@ import Communication from "./components/system-design/communication";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import Recursion from "./components/dsa/recursion";
 import Inception from "./components/react-course/inception/inception";
+import Ignition from "./components/react-course/ignition-of-app/Ignition";
 
 function App() {
   const navigate = useNavigate();
@@ -26,6 +27,9 @@ function App() {
       >
         <Menu>
           <MenuItem component={<Link to="/inception" />}>Inception</MenuItem>
+          <MenuItem component={<Link to="/ignition" />}>
+            Ignition of App
+          </MenuItem>
           <MenuItem component={<Link to="/fundamental" />}>
             Fundamentals
           </MenuItem>
@@ -49,6 +53,7 @@ function App() {
       <div className="content-section">
         <Routes>
           <Route path="inception" element={<Inception />}></Route>
+          <Route path="ignition" element={<Ignition />}></Route>
           <Route path="fundamental" element={<Fundamentals />} />
           <Route path="hooks" element={<Hooks />} />
           <Route path="internal-concepts" element={<InternaclConcepts />} />

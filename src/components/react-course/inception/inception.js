@@ -104,6 +104,25 @@ const Inception = () => {
             element then it will be replaced by react element.
           </li>
           <li>We can give any attribute to any html tag.</li>
+          <li>
+            Always remember using cdn links to inject react is not a good
+            approach
+            <ul>
+              <li>The better way to inject react in our app is using npm.</li>
+              <li>
+                Fetching react from cdn is a costly operation as it will make a
+                network call.
+              </li>
+              <li>
+                Its easy to manages react version and its dependencies using
+                package.json as we dont have to change the links which are used
+                to inject react.
+              </li>
+              <li>
+                We can simply change the version in the package.json file.
+              </li>
+            </ul>
+          </li>
         </ul>
       </Accordian>
 
