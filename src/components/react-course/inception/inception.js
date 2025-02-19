@@ -152,6 +152,17 @@ const Inception = () => {
           </li>
         </ul>
       </Accordian>
+
+      <Accordian header="Interview Questions">
+        <ul>
+          <li>
+            How to show an error screen if you react is not able to render
+            anything or replace the root? {"->"} You can simply keep a html
+            inside root tag of html so that if react is unable to render then
+            you will get the error screen.
+          </li>
+        </ul>
+      </Accordian>
     </>
   );
 };
