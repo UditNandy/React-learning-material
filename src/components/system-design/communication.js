@@ -1,8 +1,9 @@
+import Accordian from "../shared/accordian/accordian";
+
 const Communication = () => {
   return (
     <>
-      <div className="wrapper">
-        <h3>Short Polling</h3>
+      <Accordian header="Short Polling">
         <ul>
           <li>
             Polling means making multiple api calls to the server at a
@@ -58,9 +59,8 @@ const Communication = () => {
             </div>
           </li>
         </ul>
-      </div>
-      <div className="wrapper">
-        <h3>Long Polling</h3>
+      </Accordian>
+      <Accordian header="Long Polling">
         <ul>
           <li>
             This is similar to short polling but here you make the request and
@@ -101,9 +101,8 @@ const Communication = () => {
             </div>
           </li>
         </ul>
-      </div>
-      <div className="wrapper">
-        <h3>Web Socket</h3>
+      </Accordian>
+      <Accordian header="Web Socket">
         <ul>
           <li>
             It works with full duplex communication. Like the client dont need
@@ -115,7 +114,6 @@ const Communication = () => {
             each other.
           </li>
         </ul>
-
         <h4>Steps to establish a socket connection</h4>
         <ul>
           <li>
@@ -163,7 +161,76 @@ const Communication = () => {
             </div>
           </li>
         </ul>
-      </div>
+      </Accordian>
+      <Accordian header="Server Side Events">
+        <ul>
+          <li>This is very much similar to long polling.</li>
+          <li>
+            Here the connection that is made from client to server is long
+            lived.
+          </li>
+          <li>
+            But unlike long polling where we used to get all the data in one go,
+            here we will keep on getting events from the server whenever there
+            is a new data.
+          </li>
+          <li>It is a long lived unidirectional communication.</li>
+          <li>Here communication happens from server to client only.</li>
+          <li>
+            Here we will recieve data in form of <strong>event stream</strong>
+          </li>
+          <li>
+            <strong>Example</strong> :
+            <ul>
+              <li>Feeds</li>
+              <li>Notifications</li>
+              <li>Monitoring dashboard</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h4>Challanges</h4>
+        <ul>
+          <li>
+            Browser compatibility as older browsers might not support this
+            feature.
+          </li>
+          <li>
+            Connection limit as browsers have a limit on number of http
+            connections
+          </li>
+          <li>Connection Timeout / Reconnection Logic</li>
+          <li>
+            Background tab behaviour like browsers might de priotise a tabs
+            behaviour if its unused for a long time.
+          </li>
+          <li>Resource utilisation.</li>
+          <li>Load balancer / Sticky connection</li>
+          <li>Proxy/Firewall</li>
+          <li>Testing</li>
+          <li>Optimised way of broadcasting</li>
+        </ul>
+      </Accordian>
+      <Accordian header="Web Hooks">
+        <ul>
+          <li> </li>
+        </ul>
+      </Accordian>
+      <Accordian header="Event Source">
+        <ul>
+          It is a browser api which helps web pages to recive server side events
+          from a browser.
+        </ul>
+        <ul>
+          You need to pass the sse endpoint inside eventSource api and you will
+          get a event source obj.
+        </ul>
+        <li>
+          You can use events attached to that object to get the events from the
+          server.
+        </li>
+        <li>Here you will get the event stream.</li>
+      </Accordian>
     </>
   );
 };

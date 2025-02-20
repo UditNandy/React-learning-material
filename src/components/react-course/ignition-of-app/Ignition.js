@@ -264,6 +264,16 @@ const Ignition = () => {
           <li>It is generally used for executing a package.</li>
         </ul>
       </Accordian>
+      <Accordian header="Interview Questions">
+        <ul>
+          <li>What is meaning of type='module' in the script tag?</li>
+          <li>What is a module in js.</li>
+          <li>
+            What will happen if you dont pass type='module' in the script tag of
+            index.html in react.
+          </li>
+        </ul>
+      </Accordian>
     </>
   );
 };

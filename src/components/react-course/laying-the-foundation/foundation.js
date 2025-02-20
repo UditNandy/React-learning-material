@@ -170,6 +170,12 @@ const Foundation = () => {
           <li>So JSX prevents cross site scripting.</li>
         </ul>
       </Accordian>
+      <Accordian header="How to approach building a app from scratch as a Senior Developer">
+        <ul>
+          <li>Design a mock for the UI.</li>
+          <li>Deciding the different components our app can have.</li>
+        </ul>
+      </Accordian>
       <Accordian header="Interview Questions">
         <ul>
           <li>
