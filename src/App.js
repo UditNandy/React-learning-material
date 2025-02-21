@@ -10,6 +10,8 @@ import Recursion from "./components/dsa/recursion";
 import Inception from "./components/react-course/inception/inception";
 import Ignition from "./components/react-course/ignition-of-app/Ignition";
 import Foundation from "./components/react-course/laying-the-foundation/foundation";
+import NestedCheckBox from "./components/machine-coding/nested-checkbox/nested-checkbox";
+import BinarySearch from "./components/dsa/binary-search";
 
 function App() {
   const navigate = useNavigate();
@@ -49,6 +51,14 @@ function App() {
           </SubMenu>
           <SubMenu label="DSA">
             <MenuItem component={<Link to="/recursion" />}>Recursion</MenuItem>
+            <MenuItem component={<Link to="/binary-search" />}>
+              Binary Search
+            </MenuItem>
+          </SubMenu>
+          <SubMenu label="Machine Coding">
+            <MenuItem component={<Link to="/nested-checkbox" />}>
+              Nested Checkbox
+            </MenuItem>
           </SubMenu>
         </Menu>
       </Sidebar>
@@ -63,6 +73,8 @@ function App() {
           <Route path="networking" element={<Networking />} />
           <Route path="communication" element={<Communication />} />
           <Route path="recursion" element={<Recursion />}></Route>
+          <Route path="binary-search" element={<BinarySearch />}></Route>
+          <Route path="nested-checkbox" element={<NestedCheckBox />}></Route>
         </Routes>
       </div>
     </div>

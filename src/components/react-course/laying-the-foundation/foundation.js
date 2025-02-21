@@ -67,6 +67,10 @@ const Foundation = () => {
             <strong>Babel</strong> is the one who is actually behind transpile.
           </li>
           <li>
+            If you want to add inline style to JSX you can pass the css as an
+            object.
+          </li>
+          <li>
             So you can create a React element by using :
             <ul>
               <li>React.createElement</li>
@@ -150,6 +154,33 @@ const Foundation = () => {
           </li>
         </ul>
       </Accordian>
+      <Accordian header="props">
+        <ul>
+          <li>It stands for properties.</li>
+          <li>
+            If we want to pass anything to the component we can do it using
+            props.
+          </li>
+          <li>
+            As functional components are normal javascript functions, similarly
+            props are normal arguments to that functions.
+          </li>
+          <li>
+            Passing a prop to a component is just like passing an argument to a
+            function.
+          </li>
+          <li>Prop is an object argument.</li>
+          <li>We can pass any number of props we wish to.</li>
+        </ul>
+      </Accordian>
+      <Accordian header="Config Driven UI">
+        <ul>
+          <li>
+            In this approach the UI appearence and behaviour will based on a
+            json input/config.
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="Cross site scripting">
         <ul>
           <li>
@@ -174,6 +205,41 @@ const Foundation = () => {
         <ul>
           <li>Design a mock for the UI.</li>
           <li>Deciding the different components our app can have.</li>
+        </ul>
+      </Accordian>
+      <Accordian header="Unique Key while using map">
+        <ul>
+          <li>
+            Whenever you are rending a list in JSX you will get a warning :
+            "Each child in a list should have a unique key prop."
+          </li>
+          <li>
+            This warning means each of the list item rendered should be uniquely
+            represented.
+          </li>
+          <li>key prop is a reserved keyword for prop.</li>
+          <li>
+            Whenever we are rendering a list in JSX we should always attach a
+            unique key to all the rendered items.
+          </li>
+          <li>
+            Suppose there is a scenario where you have rendered a list and you
+            havn't added any key so if a new value came inside the list at a
+            particular position, then angular will treat all the elements same
+            and will redraw the entire list.
+          </li>
+          <li>
+            If we are having unique keys then in that case react can identify
+            the new items and will render only those items and not the entire
+            list.
+          </li>
+          <li>
+            Giving index is not a good practice because index might change when
+            new item is added.
+          </li>
+          <li>
+            You can use index as a key only if you don't have any unique key.
+          </li>
         </ul>
       </Accordian>
       <Accordian header="Interview Questions">
