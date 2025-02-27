@@ -12,10 +12,13 @@ import Ignition from "./components/react-course/ignition-of-app/Ignition";
 import Foundation from "./components/react-course/laying-the-foundation/foundation";
 import NestedCheckBox from "./components/machine-coding/nested-checkbox/nested-checkbox";
 import BinarySearch from "./components/dsa/binary-search";
+import AdvanceHooks from "./components/react-course/advance-hooks/advance-hooks";
+import Reconciliation from "./components/react-course/reconciliation/reconciliation";
+import DesignPatterns from "./components/react-course/design-patterns/design-patterns";
+import ReactRouter from "./components/react-course/react-router/react-router";
+import ClassComponent from "./components/react-course/class-components/class-component";
 
 function App() {
-  const navigate = useNavigate();
-
   return (
     <div className="view-page">
       <Sidebar
@@ -36,6 +39,21 @@ function App() {
           <MenuItem component={<Link to="/foundation" />}>Foundation</MenuItem>
           <MenuItem component={<Link to="/fundamental" />}>
             Fundamentals
+          </MenuItem>
+          <MenuItem component={<Link to="/advance-hooks" />}>
+            Advance Hooks
+          </MenuItem>
+          <MenuItem component={<Link to="/reconciliation" />}>
+            Reconciliation
+          </MenuItem>
+          <MenuItem component={<Link to="/react-router" />}>
+            React Router
+          </MenuItem>
+          <MenuItem component={<Link to="/class-component" />}>
+            Class Component
+          </MenuItem>
+          <MenuItem component={<Link to="/design-patterns" />}>
+            Design Patterns
           </MenuItem>
           <MenuItem component={<Link to="/hooks" />}> React Hooks </MenuItem>
           <MenuItem component={<Link to="/internal-concepts" />}>
@@ -64,17 +82,25 @@ function App() {
       </Sidebar>
       <div className="content-section">
         <Routes>
-          <Route path="inception" element={<Inception />}></Route>
-          <Route path="ignition" element={<Ignition />}></Route>
-          <Route path="foundation" element={<Foundation />}></Route>
+          <Route path="inception" element={<Inception />} />
+          <Route path="ignition" element={<Ignition />} />
+          <Route path="foundation" element={<Foundation />} />
+          <Route path="design-patterns" element={<DesignPatterns />} />
           <Route path="fundamental" element={<Fundamentals />} />
           <Route path="hooks" element={<Hooks />} />
           <Route path="internal-concepts" element={<InternaclConcepts />} />
           <Route path="networking" element={<Networking />} />
           <Route path="communication" element={<Communication />} />
-          <Route path="recursion" element={<Recursion />}></Route>
-          <Route path="binary-search" element={<BinarySearch />}></Route>
-          <Route path="nested-checkbox" element={<NestedCheckBox />}></Route>
+          <Route path="recursion" element={<Recursion />} />
+          <Route path="binary-search" element={<BinarySearch />} />
+          <Route path="nested-checkbox" element={<NestedCheckBox />} />
+          <Route path="advance-hooks" element={<AdvanceHooks />} />
+          <Route path="reconciliation" element={<Reconciliation />} />
+          <Route path="react-router" element={<ReactRouter />} />
+          <Route
+            path="class-component"
+            element={<ClassComponent name="Udit" />}
+          />
         </Routes>
       </div>
     </div>

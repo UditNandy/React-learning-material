@@ -1,5 +1,5 @@
 import "./foundation.css";
-import Accordian from "../../shared/accordian/accordian";
+import { Accordian } from "../../shared/accordian/accordian";
 import React from "react";
 
 const title = <strong>This element is from a normal react element/JSX.</strong>;
@@ -69,6 +69,9 @@ const Foundation = () => {
           <li>
             If you want to add inline style to JSX you can pass the css as an
             object.
+          </li>
+          <li>
+            React is fast because react can perform efficient DOM manipulation.
           </li>
           <li>
             So you can create a React element by using :
@@ -152,6 +155,11 @@ const Foundation = () => {
             If you want to pass some props you can pass them as arguments to the
             function call.
           </li>
+          <li>
+            You will find that some developers name they components with .jsx
+            extension and some with .js externsion. It hardly matters its only a
+            lingo.
+          </li>
         </ul>
       </Accordian>
       <Accordian header="props">
@@ -171,6 +179,16 @@ const Foundation = () => {
           </li>
           <li>Prop is an object argument.</li>
           <li>We can pass any number of props we wish to.</li>
+          <li>
+            We can pass the children props by placing the JSX inside the
+            selectors or even like a normal prop. Example children=''
+          </li>
+          <li>
+            If you are giving 2 children props to the same component one using
+            the children = '' another by the normal way and the values are
+            different then the value passed by normal way will override the
+            value passed using children=''
+          </li>
         </ul>
       </Accordian>
       <Accordian header="Config Driven UI">
@@ -242,6 +260,62 @@ const Foundation = () => {
           </li>
         </ul>
       </Accordian>
+      <Accordian header="Import & Export">
+        <ul>
+          <li>To import any js file you need to export it first.</li>
+          <li>
+            There are two ways of exporting the component.
+            <ul>
+              <li>
+                <strong>Default</strong> : We can have only one default export
+                in a file.
+              </li>
+              <li>
+                <strong>Named</strong> : If we have to export multiple things
+                from a same file.
+              </li>
+            </ul>
+          </li>
+          <li>
+            There a 2 ways of importing{" "}
+            <ul>
+              <li>
+                <strong>Default</strong> : You can directly give the function or
+                variable name which you are going to import.
+              </li>
+              <li>
+                <strong>Named</strong> : You have to use curly braces to import
+                named imports.
+              </li>
+            </ul>
+          </li>
+          <li>
+            You can also have both named and default exports for a same method
+            or variable.
+            <div>The reason of doing it is</div>
+            <ul>
+              <li>
+                Backward Compatibility : Suppose you are migrating from named to
+                default export or viceversa, this can help.
+              </li>
+              <li>Comsumers can import it as they wish.</li>
+            </ul>
+          </li>
+          <li>
+            While importing if you are not mentioning the extension of the file
+            then react will treat it like js.
+          </li>
+          <li>
+            Please check what happens if you have the file extension .jsx and
+            importing it without any extension and also in case of ts and tsx.
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="cors">
+        <ul>
+          <li>Browsers blocks api calls from one origin to another origin.</li>
+        </ul>
+      </Accordian>
       <Accordian header="Interview Questions">
         <ul>
           <li>
@@ -252,6 +326,14 @@ const Foundation = () => {
           <li>
             Role of type attribute in script tag? What options can I use there?
           </li>
+          <li>
+            <strong>Shimmer UI</strong> : A fake page which resembles the actual
+            data so that the user can have an idea of how the actual UI look
+            likes when data is fetched. Its better then spinner as it gives a
+            good user experience. You can make your own shimmer UIs using
+            components.
+          </li>
+          <li>Conditional Rendering</li>
         </ul>
       </Accordian>
     </>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./accordian.css";
 
-const Accordian = ({ header, children }) => {
+export const Accordian = ({ header, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
