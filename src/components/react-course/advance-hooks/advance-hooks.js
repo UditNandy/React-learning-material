@@ -1,11 +1,17 @@
+import { useEffect, useState } from "react";
 import Accordian from "../../shared/accordian/accordian";
 import "./advance-hooks.css";
 const AdvanceHooks = () => {
+  const isOnline = useOnlineStatus();
+
+  console.log("Is online is", isOnline);
   return (
     <>
       <Accordian header="hooks">
         <ul>
           <li>It is a normal JS function.</li>
+          <li>They are like a utility function.</li>
+          <li>We should call hooks only at top level functions.</li>
         </ul>
       </Accordian>
       <Accordian header="useState">
@@ -109,6 +115,25 @@ const AdvanceHooks = () => {
           </li>
         </ul>
       </Accordian>
+      <Accordian header="Custom Hooks">
+        <ul>
+          <li>
+            It helps in removing the extra responsibility from the components.
+          </li>
+          <li>Its recommended start with word use.</li>
+          <li>
+            Although its not recommended to use the word use but lot of projects
+            has a linter and it might throw error because of our coding
+            practices.
+          </li>
+          <li>We can use other hooks inside a custom hook.</li>
+          <li>
+            The ideal job of a component should be rendering the data, not
+            processing it. This is where custom hooks are required.
+          </li>
+          <li>It helps in managin single responsibility principle.</li>
+        </ul>
+      </Accordian>
       <Accordian header="Interview Questions">
         <ul>
           <li>Why we need useState rather then a normal variable.</li>
@@ -124,10 +149,47 @@ const AdvanceHooks = () => {
             What will happen if you start a setInterval in the cleanup function
             of useEffect.
           </li>
+          <li>Hooks vs normal functions vs utility functions.</li>
+          <li>
+            What are the principles we need to focus while creating a custom
+            hook
+          </li>
+          <li>
+            Can we make a custom hook for useLocalStorage, useSessionStorage,
+            etc.
+          </li>
+          <li>
+            Custom hook to determine if user is online or offline, internet is
+            active or inactive(check useOnlineStatus hook below in code ).
+          </li>
+          <li>What is a linter(ES Lint).</li>
         </ul>
       </Accordian>
     </>
   );
+};
+
+/*
+  Checks if internet is on or not
+  We have to use window : online event
+  Returns a boolean value
+*/
+const useOnlineStatus = () => {
+  const [onlineStatus, setOnlineStatus] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("online", () => {
+      console.log("Online called called");
+      setOnlineStatus(true);
+    });
+
+    window.addEventListener("offline", () => {
+      console.log("Offline called");
+      setOnlineStatus(false);
+    });
+  }, []);
+
+  return onlineStatus;
 };
 
 export default AdvanceHooks;

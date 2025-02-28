@@ -161,6 +161,16 @@ const Inception = () => {
             inside root tag of html so that if react is unable to render then
             you will get the error screen.
           </li>
+          <li>Compilation process in react.</li>
+        </ul>
+      </Accordian>
+
+      <Accordian header="Important Notes">
+        <ul>
+          <li>
+            The primary job of a bundler is to convert all the js files to a
+            single js file.
+          </li>
         </ul>
       </Accordian>
     </>

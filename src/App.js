@@ -17,6 +17,7 @@ import Reconciliation from "./components/react-course/reconciliation/reconciliat
 import DesignPatterns from "./components/react-course/design-patterns/design-patterns";
 import ReactRouter from "./components/react-course/react-router/react-router";
 import ClassComponent from "./components/react-course/class-components/class-component";
+import ReactOptimisation from "./components/react-course/react-optimisation/react-optimisation";
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
           </MenuItem>
           <MenuItem component={<Link to="/class-component" />}>
             Class Component
+          </MenuItem>
+          <MenuItem component={<Link to="/react-optimisation" />}>
+            React Optimisation
           </MenuItem>
           <MenuItem component={<Link to="/design-patterns" />}>
             Design Patterns
@@ -101,6 +105,7 @@ function App() {
             path="class-component"
             element={<ClassComponent name="Udit" />}
           />
+          <Route path="react-optimisation" element={<ReactOptimisation />} />
         </Routes>
       </div>
     </div>

@@ -272,6 +272,13 @@ const Ignition = () => {
             What will happen if you dont pass type='module' in the script tag of
             index.html in react.
           </li>
+          <li>
+            What are the steps that we as developers can take to make the bundle
+            size small.
+          </li>
+          <li>
+            How the bundling process will be in case of lazy loaded components.
+          </li>
         </ul>
       </Accordian>
     </>
