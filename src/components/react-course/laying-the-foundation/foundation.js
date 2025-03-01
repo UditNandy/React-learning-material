@@ -336,6 +336,21 @@ const Foundation = () => {
           <li>Conditional Rendering</li>
         </ul>
       </Accordian>
+      <Accordian header="Notes">
+        <ul>
+          <li>
+            You can maintain a props object and pass it to the component using
+            spread operator. This is another way of passing props. Example :{" "}
+            <strong>{"<Component {...props}/>"}</strong>
+          </li>
+          <li>
+            A React app has two layers <strong>UI layer</strong> and{" "}
+            <strong>data layer</strong> and the UI layer is powered by the data
+            layer. UI layer consists of JSX and the data layer consists of
+            states, props, etc.
+          </li>
+        </ul>
+      </Accordian>
     </>
   );
 };

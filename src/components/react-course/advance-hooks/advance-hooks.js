@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import Accordian from "../../shared/accordian/accordian";
 import "./advance-hooks.css";
 const AdvanceHooks = () => {
   const isOnline = useOnlineStatus();
-
-  console.log("Is online is", isOnline);
+  const example = useContext(UserContext);
+  console.log(example);
   return (
     <>
       <Accordian header="hooks">
@@ -115,6 +115,77 @@ const AdvanceHooks = () => {
           </li>
         </ul>
       </Accordian>
+      <Accordian header="Lifting the state up">
+        <ul>
+          <li>Giving parent the authority to manipulate the state of child.</li>
+          <li>
+            It is like managing the state in the parent component and passing
+            the state as props to child.
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="Props Drilling">
+        <ul>
+          <li>
+            Passing data from grand parent to grand children, where the children
+            doesnot necessarily need the props.
+          </li>
+          <li>To solve this problem we can use context or redux store.</li>
+        </ul>
+      </Accordian>
+      <Accordian header="React Context">
+        <ul>
+          <li>It is like a global thing.</li>
+          <li>Its better to keep different context in different files.</li>
+          <li>
+            We can create a context using createContext method from 'react'.
+          </li>
+          <li>
+            createContext takes a object as a argument where you can pass in the
+            default values.
+          </li>
+          <li>
+            To access the values of context we can use a hook
+            <strong>useContext</strong> and we can get the data anywhere in the
+            app.
+          </li>
+          <li>This useContext takes the context variable that we created.</li>
+          <li>
+            This useContext will return the object of values and functions that
+            are present inside the context.
+          </li>
+          <li>We can have as many context as we want to in a react app.</li>
+          <li>
+            For class components we can use{" "}
+            <strong>
+              {
+                "<ContextName.consumer>{(data)=>{console.log(data)}}</ContextName.consumer>"
+              }
+            </strong>{" "}
+            inside the JSX.
+          </li>
+          <li>
+            Here we pass a callback function in between the component
+            ContextName.consumer which gives us the data.
+          </li>
+          <li>
+            If we want to pass new data to the context we can use
+            <strong>
+              {
+                "<ContextName.Provider value={}> <Component/></ContextName.Provider>"
+              }
+            </strong>
+          </li>
+          <li>
+            To add new values we can simply pass the value inside the value
+            props of ContextName.provider .
+          </li>
+          <li>
+            Now all the component which are the child of ContextName.provider
+            will get the updated value.
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="Custom Hooks">
         <ul>
           <li>
@@ -163,6 +234,27 @@ const AdvanceHooks = () => {
             active or inactive(check useOnlineStatus hook below in code ).
           </li>
           <li>What is a linter(ES Lint).</li>
+          <li>Lifting the state up</li>
+          <li>Example of Props drilling : Dark/Light Theme, Login info, etc</li>
+          <li>
+            What will happen if we are having nested context providers with
+            different values at different levels.
+          </li>
+          <li>Can we use Context.Consumer inside functional components.</li>
+          <li>Whats the difference between context and redux store.</li>
+        </ul>
+      </Accordian>
+      <Accordian header="Note">
+        <ul>
+          <li>
+            If you are providing a new value but you have only wrapped a certain
+            amount of code and not the while code then remember only the
+            children of the wrapped code will get the updated value. Rest
+            everywhere you will get the old/default value. Based on requirement
+            you need to choose if you want to provide the updated value to
+            entire app or only some particular section of app.
+          </li>
+          <li>Context also works in case of lazy loaded components.</li>
         </ul>
       </Accordian>
     </>
@@ -191,5 +283,9 @@ const useOnlineStatus = () => {
 
   return onlineStatus;
 };
+
+const UserContext = createContext({
+  loggedIn: false,
+});
 
 export default AdvanceHooks;
