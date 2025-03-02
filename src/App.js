@@ -18,6 +18,7 @@ import DesignPatterns from "./components/react-course/design-patterns/design-pat
 import ReactRouter from "./components/react-course/react-router/react-router";
 import ClassComponent from "./components/react-course/class-components/class-component";
 import ReactOptimisation from "./components/react-course/react-optimisation/react-optimisation";
+import ReduxNotes from "./components/react-course/redux/redux-notes";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
           <MenuItem component={<Link to="/react-optimisation" />}>
             React Optimisation
           </MenuItem>
+          <MenuItem component={<Link to="/redux" />}>Redux</MenuItem>
           <MenuItem component={<Link to="/design-patterns" />}>
             Design Patterns
           </MenuItem>
@@ -105,6 +107,7 @@ function App() {
             path="class-component"
             element={<ClassComponent name="Udit" />}
           />
+          <Route path="redux" element={<ReduxNotes />} />
           <Route path="react-optimisation" element={<ReactOptimisation />} />
         </Routes>
       </div>
