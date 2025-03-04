@@ -19,11 +19,15 @@ import ReactRouter from "./components/react-course/react-router/react-router";
 import ClassComponent from "./components/react-course/class-components/class-component";
 import ReactOptimisation from "./components/react-course/react-optimisation/react-optimisation";
 import ReduxNotes from "./components/react-course/redux/redux-notes";
+import Authentication from "./components/react-course/authentication/authentication";
+import AdditionalConcepts from "./components/react-course/additional-concepts/additional-concepts";
+import InterviewQuestion from "./components/react-course/interview-questions/interview-questions";
 
 function App() {
   return (
     <div className="view-page">
       <Sidebar
+        id="side-bar"
         rootStyles={{
           background: "#121417",
           height: "100vh",
@@ -61,6 +65,14 @@ function App() {
           <MenuItem component={<Link to="/design-patterns" />}>
             Design Patterns
           </MenuItem>
+          <SubMenu label="Miscellaneous">
+            <MenuItem component={<Link to="/additional-concepts" />}>
+              Additional Concepts
+            </MenuItem>
+            <MenuItem component={<Link to="/authentication" />}>
+              Authentication
+            </MenuItem>
+          </SubMenu>
           <MenuItem component={<Link to="/hooks" />}> React Hooks </MenuItem>
           <MenuItem component={<Link to="/internal-concepts" />}>
             Internal Concepts{" "}
@@ -84,6 +96,9 @@ function App() {
               Nested Checkbox
             </MenuItem>
           </SubMenu>
+          <MenuItem component={<Link to="/interview-questions" />}>
+            Interview Questions
+          </MenuItem>
         </Menu>
       </Sidebar>
       <div className="content-section">
@@ -109,6 +124,9 @@ function App() {
           />
           <Route path="redux" element={<ReduxNotes />} />
           <Route path="react-optimisation" element={<ReactOptimisation />} />
+          <Route path="authentication" element={<Authentication />} />
+          <Route path="additional-concepts" element={<AdditionalConcepts />} />
+          <Route path="interview-questions" element={<InterviewQuestion />} />
         </Routes>
       </div>
     </div>

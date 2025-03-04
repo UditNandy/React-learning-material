@@ -97,6 +97,21 @@ const DesignPatterns = () => {
           </li>
         </ul>
       </Accordian>
+      <Accordian header="Render Props">
+        <ul>
+          <li>
+            Render prop is a prop which takes a function and returns a JSX.
+          </li>
+          <li>
+            Here the responsibility of rendering the UI is on the function which
+            is passed as prop to the component.{" "}
+          </li>
+          <li>
+            The component here is responsible mainly to focus on the logic part
+            rather then the UI/view.{" "}
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="Pure Functions">
         <ul>
           <li>Functions which always produce same output for same input.</li>
@@ -146,6 +161,11 @@ const DesignPatterns = () => {
           <li>
             Higer order components donot modify the existing component it only
             add some new features to it.
+          </li>
+          <li>
+            In higher order components we pass components to a function and in
+            render props we pass a function to a component which renders the UI
+            (both are just opposite).
           </li>
         </ul>
       </Accordian>

@@ -1,7 +1,7 @@
 import "./foundation.css";
 import { Accordian } from "../../shared/accordian/accordian";
 import React from "react";
-
+import PropTypes, { prop } from "prop-types";
 const title = <strong>This element is from a normal react element/JSX.</strong>;
 const el = React.createElement("h1", {}, title);
 const Foundation = () => {
@@ -191,6 +191,42 @@ const Foundation = () => {
           </li>
         </ul>
       </Accordian>
+      <Accordian header="PropTypes & Default Props">
+        <ul>
+          <li>
+            <strong>PropTypes</strong> is a library which helps us to identify
+            or keep a check on the data type of props.
+          </li>
+          <li>
+            Before React 15 it was a part of React library but now it comes as a
+            different library.
+          </li>
+          <li>
+            Its not going to break the code or give any syntax error, but if you
+            pass any wrong data to the props you will see a warning in the
+            console.
+          </li>
+          <li>
+            To apply propTypes you can simply assign the types to{" "}
+            <strong>
+              {
+                "function.propTypes={ propName:PropType.<datatype>.<isRequired> }"
+              }
+            </strong>
+            <li>
+              You can make a prop required by adding isRequired to that props.
+            </li>
+            <li>
+              To achieve strict type checking we can use{" "}
+              <strong>Typescript</strong> or we have to manually throw error by
+              checking for the props.
+            </li>
+          </li>
+          <li>
+            <PropsTypeDemo name={10} />
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="Config Driven UI">
         <ul>
           <li>
@@ -334,6 +370,10 @@ const Foundation = () => {
             components.
           </li>
           <li>Conditional Rendering</li>
+          <li>
+            How are different build tools (parcel,webpack,vite,etc) different
+            and which one should we use.
+          </li>
         </ul>
       </Accordian>
       <Accordian header="Notes">
@@ -353,6 +393,20 @@ const Foundation = () => {
       </Accordian>
     </>
   );
+};
+
+function PropsTypeDemo({ name, age, dob }) {
+  return (
+    <>
+      Prop Type Example {name}, {age},{dob}
+    </>
+  );
+}
+
+PropsTypeDemo.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  dob: PropTypes.instanceOf(Date),
 };
 
 export default Foundation;

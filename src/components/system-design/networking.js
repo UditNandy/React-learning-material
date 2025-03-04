@@ -1,9 +1,10 @@
+import Accordian from "../shared/accordian/accordian";
 const Networking = () => {
   return (
     <>
-      <div className="wrapper">
-        <h3>How web works</h3>
-      </div>
+      <Accordian header="How the webpage renders in bowser">
+        <ul></ul>
+      </Accordian>
     </>
   );
 };
