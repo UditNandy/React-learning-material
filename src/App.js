@@ -22,6 +22,8 @@ import ReduxNotes from "./components/react-course/redux/redux-notes";
 import Authentication from "./components/react-course/authentication/authentication";
 import AdditionalConcepts from "./components/react-course/additional-concepts/additional-concepts";
 import InterviewQuestion from "./components/react-course/interview-questions/interview-questions";
+import RestApi from "./components/system-design/rest-api";
+import DatabaseAndCaching from "./components/system-design/database-and-caching";
 
 function App() {
   return (
@@ -81,8 +83,12 @@ function App() {
             <MenuItem component={<Link to="/networking" />}>
               Networking
             </MenuItem>
+            <MenuItem component={<Link to="/rest-api" />}>REST Api</MenuItem>
             <MenuItem component={<Link to="/communication" />}>
               Communication
+            </MenuItem>
+            <MenuItem component={<Link to="/database-and-caching" />}>
+              Database/Caching
             </MenuItem>
           </SubMenu>
           <SubMenu label="DSA">
@@ -127,6 +133,8 @@ function App() {
           <Route path="authentication" element={<Authentication />} />
           <Route path="additional-concepts" element={<AdditionalConcepts />} />
           <Route path="interview-questions" element={<InterviewQuestion />} />
+          <Route path="rest-api" element={<RestApi />} />
+          <Route path="database-and-caching" element={<DatabaseAndCaching />} />
         </Routes>
       </div>
     </div>
