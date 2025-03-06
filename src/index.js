@@ -6,6 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore.js";
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-alpine.css";
+import { ModuleRegistry } from "ag-grid-community";
+import { ClientSideRowModelModule } from "ag-grid-community";
+
+ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

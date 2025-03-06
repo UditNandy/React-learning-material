@@ -92,6 +92,17 @@ const InterviewQuestion = () => {
           <li>What is Zustand, and how does it simplify state management.</li>
         </ul>
       </Accordian>
+      <Accordian header="Miscellnious">
+        <ul>
+          <li>
+            <strong>Render Hijacking</strong> : The ability to control the
+            output of one component by another component. Example : wrapping a
+            componenet inside a higher order component.
+          </li>
+          <li>What is the purpose of registerServiceWorker in React?</li>
+          <li>What is React memo function?</li>
+        </ul>
+      </Accordian>
     </>
   );
 };

@@ -242,6 +242,14 @@ const AdvanceHooks = () => {
           </li>
           <li>Can we use Context.Consumer inside functional components.</li>
           <li>Whats the difference between context and redux store.</li>
+          <li>
+            How to prevent re rendering after setState : Donot update the state
+            return the prev value only if current and prev value are same.
+          </li>
+          <li>
+            What you should do if you want to update the state but not re render
+            it? Use ref in this case.
+          </li>
         </ul>
       </Accordian>
       <Accordian header="Note">

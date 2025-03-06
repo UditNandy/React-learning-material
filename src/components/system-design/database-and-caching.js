@@ -177,8 +177,169 @@ const DatabaseAndCaching = () => {
           <li>
             Simplifing a complex structure (flatterning a complex structure).
           </li>
-          <li>Try to keep different types of info seperatly.</li>
+          <li>
+            Try to keep different types of info seperatly like student info and
+            associate college info should be kept seperatly.
+          </li>
           <li>Have relationships with unique ids.</li>
+          <li>
+            Suppose we are having a list of users we might convert it to object
+            where key is id and value is indivisual user data.
+          </li>
+          <li>
+            If its required to maintain the order we can have a new key called
+            order which contains an array with ids in order.
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="HTTP Caching">
+        <ul>
+          <li>We do have something known as browser cache.</li>
+          <li>
+            Suppose we are requesting something from the server then those data
+            will be first searched in the browser cache if data is not present
+            in the cache then request will be made in the server.
+          </li>
+          <li>We can do browser caching by storing it in web storages.</li>
+          <li>Suppose we dont have the data in cache.</li>
+          <li>
+            We can try and cache web resources like js,css,images,fonts,etc.
+          </li>
+          <li>
+            Caching is going to reduce server traffic and give better user
+            experience.
+          </li>
+          <li>
+            We are having headers to control caching.
+            <ul>
+              <li>
+                <strong>Cache Control</strong> : This is a response header which
+                will cache the data for a given expiry. Whenever you will reload
+                the api you will get the data from cache. Example : You can keep
+                assests,images,etc.
+              </li>
+              <li>
+                <strong>Expires</strong> : In the response header we have a time
+                and new data will only be fetched once the expiry time is
+                passed. Till that time data will be fetched from the cache.
+              </li>
+              <li>
+                <strong>Last-Modified</strong> : A check which compares the last
+                modified data time in server and client. Here server send 304 in
+                case of last modified time is same. It means the data present in
+                client is not modified use it as it is.
+              </li>
+              <li>
+                <strong>Etag</strong> : A hash for each data. Here if the hash
+                dont match means the data has been modified.
+              </li>
+            </ul>
+          </li>
+          <li>Priority : {"Cache-control > Expires > Last Modified , Etag"}</li>
+          <li>
+            Challenges
+            <ul>
+              <li>
+                If you want to get data always from the server not from cache
+                you have to add some random hash params so that the validation
+                will fail in browser and data will come from server.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="Service Worker Caching">
+        <ul>
+          <li>
+            Service Worker actually sits between the application, browser and
+            network layer.
+          </li>
+          <li>
+            It is a proxy and all the request will go through the
+            <strong>Service worker</strong>
+            and it decides if the newtwork request has to be done to the server
+            or to the cache.
+          </li>
+          <li>
+            The service worker needs to be installed and activated. Now service
+            worker will perform the above operations.
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="API Caching">
+        <ul>
+          <li>We can use some libraries to get internal in-memory caching.</li>
+          <li>
+            Example - React Query(known as TanStack Query can help in caching
+            graphQL apis and rest apis), axios, swr, appolo client,
+          </li>
+          <li>
+            Api caching statergies
+            <ul>
+              <li>
+                <strong>cache-first</strong> : If data is present in cache dont
+                make a server call. Example : Product Description
+              </li>
+              <li>
+                <strong>network-only</strong> : Always fetch data from server no
+                cache check. Example : Balance enquiry.
+              </li>
+              <li>
+                <strong>cache-and-network</strong> : Get the data from cache
+                first and make a call to network parallely once data is fetched
+                from the server replace the data. Example : Product Reviews
+                Details.
+              </li>
+              <li>
+                <strong>cache-last</strong>
+              </li>
+              <li>
+                <strong>no-cache</strong> : In case of no cache we are not even
+                going to store the data in cache, in case of network only me may
+                or maynot store the data in cache.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="State Management">
+        <ul>
+          <li>If page is reloaded data will be deleted.</li>
+          <li>
+            Example - Redux, Mobax, Context API(React), Behaviour Subject/Replay
+            Subject/NgRx(Angular), Zustand(React)
+          </li>
+          <li>
+            <strong>Redux</strong>
+            <ul>
+              <li>Has a central Store which keeps all the data/state</li>
+              <li>
+                The view/components are going to subscribe the store to get the
+                data.
+              </li>
+              <li>
+                If the component wants to add/modify any data it will dispatch a
+                action.
+              </li>
+              <li>
+                The actions are captured by reducers which actually contains the
+                data updation logic and it executes the logic to update the
+                state in store.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Context API</strong>
+            <ul>
+              <li>Data Passing without using prop drilling.</li>
+              <li>
+                It has <strong>Provider</strong> which provides the data.
+              </li>
+              <li>
+                It has <strong>Consumer</strong> which consumes the data.
+              </li>
+            </ul>
+          </li>
         </ul>
       </Accordian>
       <Accordian header="Interview Questions">
@@ -195,6 +356,15 @@ const DatabaseAndCaching = () => {
             </div>
           </li>
           <li>Difference between document and window.</li>
+          <li>Service Factory in Angular.</li>
+          <li>How things work differently in normal and incognito mode.</li>
+          <li>
+            Whats the size limit of browser cache and when not to use cache.
+          </li>
+          <li>Meaning of proxy.</li>
+          <li>What are the types of data we can cache.</li>
+          <li>How to achieve caching using axios.</li>
+          <li>Context Api vs Redux</li>
         </ul>
       </Accordian>
     </>

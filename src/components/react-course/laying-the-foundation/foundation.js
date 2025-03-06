@@ -221,6 +221,10 @@ const Foundation = () => {
               <strong>Typescript</strong> or we have to manually throw error by
               checking for the props.
             </li>
+            <li>
+              We can even allow multiple types for a single prop using
+              <strong>PropTypes.oneOfType([....PropTypes.datatype])</strong>
+            </li>
           </li>
           <li>
             <PropsTypeDemo name={10} />

@@ -10,7 +10,6 @@ import Recursion from "./components/dsa/recursion";
 import Inception from "./components/react-course/inception/inception";
 import Ignition from "./components/react-course/ignition-of-app/Ignition";
 import Foundation from "./components/react-course/laying-the-foundation/foundation";
-import NestedCheckBox from "./components/machine-coding/nested-checkbox/nested-checkbox";
 import BinarySearch from "./components/dsa/binary-search";
 import AdvanceHooks from "./components/react-course/advance-hooks/advance-hooks";
 import Reconciliation from "./components/react-course/reconciliation/reconciliation";
@@ -24,6 +23,7 @@ import AdditionalConcepts from "./components/react-course/additional-concepts/ad
 import InterviewQuestion from "./components/react-course/interview-questions/interview-questions";
 import RestApi from "./components/system-design/rest-api";
 import DatabaseAndCaching from "./components/system-design/database-and-caching";
+import FileExplorer from "./components/machine-coding/file-explorer/file-explorer";
 
 function App() {
   return (
@@ -98,8 +98,8 @@ function App() {
             </MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding">
-            <MenuItem component={<Link to="/nested-checkbox" />}>
-              Nested Checkbox
+            <MenuItem component={<Link to="/file-explorer" />}>
+              File Explorer
             </MenuItem>
           </SubMenu>
           <MenuItem component={<Link to="/interview-questions" />}>
@@ -120,7 +120,7 @@ function App() {
           <Route path="communication" element={<Communication />} />
           <Route path="recursion" element={<Recursion />} />
           <Route path="binary-search" element={<BinarySearch />} />
-          <Route path="nested-checkbox" element={<NestedCheckBox />} />
+          <Route path="file-explorer" element={<FileExplorer />} />
           <Route path="advance-hooks" element={<AdvanceHooks />} />
           <Route path="reconciliation" element={<Reconciliation />} />
           <Route path="react-router" element={<ReactRouter />} />
