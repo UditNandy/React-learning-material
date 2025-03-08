@@ -17,6 +17,7 @@ const ReduxNotes = () => {
       <Accordian header="Redux">
         <ul>
           <li>It is not a mandatory stuff.</li>
+          <li>It is a organised way/pattern to handle state.</li>
           <li>It should be avoided in small applications.</li>
           <li>
             Redux is a seperate state management library which we use with
@@ -118,6 +119,30 @@ const ReduxNotes = () => {
               </li>
               <li>The subscription is done using selectors. </li>
             </ul>
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="Middlewares">
+        <ul>
+          <li>
+            These are curreyed functions which acts as an interceptor when some
+            action is dispatched.
+          </li>
+          <li>
+            It takes 3 arguments <strong>store, next, action</strong>
+          </li>
+          <li>
+            If we want to send the action to the reducer we need to pass the
+            original/updated action in the next method.
+          </li>
+          <li>
+            We can associate middlewares in the configureStore when below
+            reducer object we can add middleware key and it take a callback
+            function which returns a array of middlewares.
+          </li>
+          <li>
+            You can add as many middlewares as you want and they will be
+            executed in the order they are placed in array.
           </li>
         </ul>
       </Accordian>

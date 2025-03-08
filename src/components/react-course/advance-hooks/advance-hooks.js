@@ -263,6 +263,10 @@ const AdvanceHooks = () => {
             entire app or only some particular section of app.
           </li>
           <li>Context also works in case of lazy loaded components.</li>
+          <li>
+            React re renders a component only if the previous and current state
+            are different or atleast their reference is different.
+          </li>
         </ul>
       </Accordian>
     </>

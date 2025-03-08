@@ -1,4 +1,4 @@
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Fundamentals } from "./components/fundamentals/Fundamentals";
 import { Hooks } from "./components/hooks/Hooks";
@@ -24,6 +24,8 @@ import InterviewQuestion from "./components/react-course/interview-questions/int
 import RestApi from "./components/system-design/rest-api";
 import DatabaseAndCaching from "./components/system-design/database-and-caching";
 import FileExplorer from "./components/machine-coding/file-explorer/file-explorer";
+import ReduxIntro from "./components/react-course/redux/redux-intro";
+import { TypescriptDemo } from "./components/typescript/typescript-intro.tsx";
 
 function App() {
   return (
@@ -63,7 +65,19 @@ function App() {
           <MenuItem component={<Link to="/react-optimisation" />}>
             React Optimisation
           </MenuItem>
-          <MenuItem component={<Link to="/redux" />}>Redux</MenuItem>
+          <SubMenu label="Typescript">
+            <MenuItem component={<Link to="/typescript-intro" />}>
+              Typescript Introduction
+            </MenuItem>
+          </SubMenu>
+          <SubMenu label="Redux">
+            <MenuItem component={<Link to="/redux-intro" />}>
+              Redux Intro
+            </MenuItem>
+            <MenuItem component={<Link to="/redux-summery" />}>
+              Redux Summery
+            </MenuItem>
+          </SubMenu>
           <MenuItem component={<Link to="/design-patterns" />}>
             Design Patterns
           </MenuItem>
@@ -128,13 +142,15 @@ function App() {
             path="class-component"
             element={<ClassComponent name="Udit" />}
           />
-          <Route path="redux" element={<ReduxNotes />} />
+          <Route path="redux-intro" element={<ReduxIntro />} />
+          <Route path="redux-summery" element={<ReduxNotes />} />
           <Route path="react-optimisation" element={<ReactOptimisation />} />
           <Route path="authentication" element={<Authentication />} />
           <Route path="additional-concepts" element={<AdditionalConcepts />} />
           <Route path="interview-questions" element={<InterviewQuestion />} />
           <Route path="rest-api" element={<RestApi />} />
           <Route path="database-and-caching" element={<DatabaseAndCaching />} />
+          <Route path="typescript-intro" element={<TypescriptDemo />} />
         </Routes>
       </div>
     </div>
