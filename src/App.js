@@ -26,6 +26,7 @@ import DatabaseAndCaching from "./components/system-design/database-and-caching"
 import FileExplorer from "./components/machine-coding/file-explorer/file-explorer";
 import ReduxIntro from "./components/react-course/redux/redux-intro";
 import { TypescriptDemo } from "./components/typescript/typescript-intro.tsx";
+import { ReactSSR } from "./components/react-course/ssr/react-ssr.js";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
               Typescript Introduction
             </MenuItem>
           </SubMenu>
+          <MenuItem component={<Link to="/react-ssr" />}>React SSR</MenuItem>
           <SubMenu label="Redux">
             <MenuItem component={<Link to="/redux-intro" />}>
               Redux Intro
@@ -151,6 +153,7 @@ function App() {
           <Route path="rest-api" element={<RestApi />} />
           <Route path="database-and-caching" element={<DatabaseAndCaching />} />
           <Route path="typescript-intro" element={<TypescriptDemo />} />
+          <Route path="react-ssr" element={<ReactSSR />} />
         </Routes>
       </div>
     </div>

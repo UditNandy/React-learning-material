@@ -1,3 +1,4 @@
+import React from "react";
 import Accordian from "../../shared/accordian/accordian";
 
 const InterviewQuestion = () => {
@@ -101,6 +102,11 @@ const InterviewQuestion = () => {
           </li>
           <li>What is the purpose of registerServiceWorker in React?</li>
           <li>What is React memo function?</li>
+          <li>
+            <strong>Keyed Fragments</strong> : React Fragments with keys but
+            here we cant simply use {"<></>"} we have to use
+            {"<React.Fragment key={key}></React.Fragment>"}
+          </li>
         </ul>
       </Accordian>
     </>
