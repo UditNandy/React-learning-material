@@ -84,6 +84,22 @@ const ReactOptimisation = () => {
           <li>The fallback takes a jsx.</li>
         </ul>
       </Accordian>
+      <Accordian header="Lazy loading of Utility Functions">
+        <ul>
+          <li>
+            Suppose we have a utility function which is heavy enough so we can
+            simply import it on demand.
+          </li>
+          <li>
+            We can achieve it by importing the js file using import() method and
+            using the file afterwards.
+          </li>
+          <li>
+            Remeber here we are not using lazy keyword we are only importing the
+            file on demand.
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="Notes">
         <ul>
           <li>
