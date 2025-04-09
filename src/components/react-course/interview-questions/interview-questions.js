@@ -10,8 +10,11 @@ const InterviewQuestion = () => {
             <strong>What is HTML</strong>
           </li>
           <li>
-            <strong>What is iframe and sandbox attribute.</strong> : (webpage
-            inside webpage).
+            <strong>What is iframe and sandbox attribute.</strong> : It is used
+            to embedded another html page inside the current page. The sandbox
+            attribute is used to restrict the actions that can be performed
+            inside the iframe. It can be used to prevent scripts from running,
+            prevent form submission, restrict popup/modal opening and more.
           </li>
           <li>
             <strong>Attributes in Html.</strong>
@@ -56,8 +59,17 @@ const InterviewQuestion = () => {
             <strong>loading="lazy"</strong>
           </li>
           <li>
-            <strong>Use of doctype</strong> : It tells the browser which version
-            of HTML to use. It helps the browser to render the page correctly.
+            <strong>Use of doctype</strong> :
+            <ul>
+              <li>
+                It tells the browser which version of HTML to use. It helps the
+                browser to render the page correctly.
+              </li>
+              <li>
+                Without this browser might render the page in quick mode, which
+                mimics old and buggy behaviour for backward compactibility.
+              </li>
+            </ul>
           </li>
           <li>
             <strong>Different type of doctypes</strong>
@@ -91,10 +103,26 @@ const InterviewQuestion = () => {
             zoomed out and tiny on mobile devices.
           </li>
           <li>
-            <strong>Link vs anchor tag</strong>
+            <strong>{"<link>"}</strong> :{" "}
+            <ul>
+              <li>
+                Used to link different files to the current html document.
+              </li>
+              <li>
+                <strong>rel</strong> : stands for relation
+              </li>
+              <li>common values are stylesheet, icon, preload, etc.</li>
+            </ul>
           </li>
           <li>
-            <strong>Different type of meta tags</strong>
+            <strong>Different type of meta tags</strong>:
+            <ul>
+              <li>charset</li>
+              <li>keywords : Was used to specify keywords for SEO.</li>
+              <li>author</li>
+              <li>description</li>
+              <li>viewport</li>
+            </ul>
           </li>
           <li>
             <strong>{"<datalist/>"}</strong> : It is used to provide a list of
@@ -124,7 +152,9 @@ const InterviewQuestion = () => {
             a progress bar in the ui. It comes by default with HTML5.
           </li>
           <li>
-            <strong>drag and drop</strong>
+            <strong>drag and drop</strong> : Set draggable="true" in the element
+            to make it draggable. We can use dragstart, dragenter, dragleave,
+            dragover, drop and dragend events to handle the drag and drop.
           </li>
           <li>
             <strong>
@@ -136,7 +166,7 @@ const InterviewQuestion = () => {
             <strong>audio and video tags.</strong>
           </li>
           <li>
-            <strong>canvas vs svg</strong>
+            <strong>canvas vs svg</strong> : Please read through chatgpt.
           </li>
           <li>
             <strong>Different type of types in input</strong>: color, date,etc
@@ -149,10 +179,17 @@ const InterviewQuestion = () => {
             multithreading in js.
           </li>
           <li>
-            <strong>Raster vs Vector.</strong>
+            <strong>Raster vs Vector.</strong> : Read through internet.
           </li>
           <li>
-            <strong>Different ways to handle responsiveness.</strong>
+            <strong>Different ways to handle responsiveness.</strong> :
+            <ul>
+              <li>Media Queries</li>
+              <li>Responsive Units</li>
+              <li>Grid and flex</li>
+              <li>View port metag tag must be there</li>
+              <li>Mobile First Design.</li>
+            </ul>
           </li>
           <li>
             <strong>Geolocation Api.</strong>
@@ -209,6 +246,27 @@ const InterviewQuestion = () => {
           </li>
           <li>
             <strong>defer and async attributes in the {"<script>"} tag</strong>
+          </li>
+          <li>
+            <strong>preload</strong>
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="Javascript">
+        <ul>
+          <li>
+            <strong>Global Objects of BOM and DOM</strong>:
+            <ul>
+              <li>window</li>
+              <li>document</li>
+              <li>navigator</li>
+              <li>location</li>
+              <li>history</li>
+              <li>screen</li>
+            </ul>
+          </li>
+          <li>
+            <strong>innerwidth vs outerwidth</strong>
           </li>
         </ul>
       </Accordian>
