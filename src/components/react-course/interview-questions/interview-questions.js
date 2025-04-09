@@ -4,6 +4,214 @@ import Accordian from "../../shared/accordian/accordian";
 const InterviewQuestion = () => {
   return (
     <>
+      <Accordian header="HTML">
+        <ul>
+          <li>
+            <strong>What is HTML</strong>
+          </li>
+          <li>
+            <strong>What is iframe and sandbox attribute.</strong> : (webpage
+            inside webpage).
+          </li>
+          <li>
+            <strong>Attributes in Html.</strong>
+          </li>
+          <li>
+            <strong>Void elements </strong> : Elements that dont need a closing
+            tag.
+          </li>
+          <li>
+            <strong>Entites in HTML </strong>: In html there are some characters
+            like {"<"} reserved so we can use an id if we want to display them
+            like {"&lt;"}
+          </li>
+          <li>
+            <strong>enctype</strong> : It defines how the form data should be
+            encoded when submitted to the server. Its values are{" "}
+            <strong>
+              text/plain, application/x-www-form-urlencoded(default), and
+              multipart/form-data.
+            </strong>
+          </li>
+          <li>
+            <strong>multipart/form-data</strong> : Typically used for file
+            upload. It encodes the form property so that both text and file can
+            be handled. Without multipart/form-data, the filename will be sent
+            to the server in place of the file.
+          </li>
+          <li>
+            <strong>How to optimize website assets loading?</strong>
+            <ul>
+              <li>CDN hosting</li>
+              <li>File compression</li>
+              <li>File concatenation</li>
+              <li>Minify scripts</li>
+              <li>Parallel downloads</li>
+              <li>Lazy Loading</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Lazy loading of img src</strong>: It helps in defering the
+            loading of images till its enter the viewport{" "}
+            <strong>loading="lazy"</strong>
+          </li>
+          <li>
+            <strong>Use of doctype</strong> : It tells the browser which version
+            of HTML to use. It helps the browser to render the page correctly.
+          </li>
+          <li>
+            <strong>Different type of doctypes</strong>
+            <ul>
+              <li>
+                <strong>Strict</strong> : Allows only modern html and not
+                deprecated elements.
+              </li>
+              <li>
+                <strong>Transitional</strong> : Allows modern and deprecated
+                elements.
+              </li>
+              <li>
+                <strong>Frameset</strong> : Used when layouts uses frameset
+                instead of body.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>{'<meta charset="UTF-8">'}</strong> : It tells the browser
+            which character encoding to use to correctly display your content.
+          </li>
+          <li>
+            <strong>
+              {
+                '<meta name="viewport" content="width=device-width, initial-scale=1"/>'
+              }
+            </strong>{" "}
+            It makes our website responsive by matching the screen's width and
+            setting the initial zoom level. Without it, our site may appear
+            zoomed out and tiny on mobile devices.
+          </li>
+          <li>
+            <strong>Link vs anchor tag</strong>
+          </li>
+          <li>
+            <strong>Different type of meta tags</strong>
+          </li>
+          <li>
+            <strong>{"<datalist/>"}</strong> : It is used to provide a list of
+            options for an
+            <strong>input</strong> element. It is used to create a dropdown list
+            of suggestions for the user to choose from. It is like
+            auto-suggestion. It is introduced in HTML5.
+          </li>
+          <li>
+            <strong>Image map</strong> : The {"<map>"} and {"<area>"} tags
+            (i.e., image maps) are useful when you want different parts of a
+            single image to be clickable and perform different actions—like
+            navigating to different pages or sections.
+          </li>
+          <li>
+            <strong>Semantic Elements</strong> : These are tags which clearly
+            describes their meaning to both browser and developer. Example :{" "}
+            <strong>header, footer, article, section, nav, img</strong> etc.
+          </li>
+          <li>
+            <strong>Non-semantic Elements</strong> : These are tags which do not
+            clearly describe their meaning to both browser and developer.
+            Example: <strong>div, span</strong>.
+          </li>
+          <li>
+            <strong>{"<progress>"}</strong> : As the name suggest it is creates
+            a progress bar in the ui. It comes by default with HTML5.
+          </li>
+          <li>
+            <strong>drag and drop</strong>
+          </li>
+          <li>
+            <strong>
+              Write a program to create a form which takes 2 inputs and show
+              their sum, without using js only using html. {"<output>"}
+            </strong>
+          </li>
+          <li>
+            <strong>audio and video tags.</strong>
+          </li>
+          <li>
+            <strong>canvas vs svg</strong>
+          </li>
+          <li>
+            <strong>Different type of types in input</strong>: color, date,etc
+          </li>
+          <li>
+            <strong>server-sent events</strong>
+          </li>
+          <li>
+            <strong>Web workers</strong> : It can be used to achieve
+            multithreading in js.
+          </li>
+          <li>
+            <strong>Raster vs Vector.</strong>
+          </li>
+          <li>
+            <strong>Different ways to handle responsiveness.</strong>
+          </li>
+          <li>
+            <strong>Geolocation Api.</strong>
+          </li>
+          <li>
+            <strong>Web components.</strong>
+          </li>
+          <li>
+            <strong>
+              What are data attributes in HTML, and how are they used?
+            </strong>{" "}
+            : Starts with data- and can be used to store custom data on HTML.
+            Just like data-test-id. We can access data-test-id value as
+            div.dataset.testId while accessing it in js.
+          </li>
+
+          <li>
+            <strong>{"<template>"}</strong> : Just like ng-template in angular,
+            it is used to declare a block of HTML that is not rendered
+            immediately but can be instantiated later.
+          </li>
+          <li>
+            <strong>contenteditable</strong> : It is an attribute that can be
+            added to any HTML element to make it editable by the user. If we add
+            this attribute to a div, the user can click on the div and edit its
+            content directly in the browser.
+          </li>
+          <li>
+            <strong>rel</strong>:The rel attribute specifies the relationship
+            between the current document and the linked resource. For example,
+            rel=”stylesheet” indicates that the linked file is a CSS stylesheet.
+          </li>
+          <li>
+            <strong>
+              How to change ordered list numbering format in middle of a list.
+            </strong>{" "}
+            : Simply specify the type in th li tag in li tag where we want to
+            change the type.
+          </li>
+          <li>
+            <strong>Group different checkboxes or radios together.</strong>
+          </li>
+          <li>
+            <strong>Shadow DOM</strong>
+          </li>
+          <li>
+            <strong>ARIA</strong>
+          </li>
+          <li>
+            <strong>display:none vs visibility:hidden</strong>
+          </li>
+          <li>
+            <strong>{"<meter>"}</strong>
+          </li>
+          <li>
+            <strong>defer and async attributes in the {"<script>"} tag</strong>
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="Virtual DOM and Rendering">
         <ol>
           <li>What is the Virtual DOM, and how does it work.</li>

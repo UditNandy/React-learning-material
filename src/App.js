@@ -27,6 +27,10 @@ import FileExplorer from "./components/machine-coding/file-explorer/file-explore
 import ReduxIntro from "./components/react-course/redux/redux-intro";
 import { TypescriptDemo } from "./components/typescript/typescript-intro.tsx";
 import { ReactSSR } from "./components/react-course/ssr/react-ssr.js";
+import Security from "./components/system-design/security.js";
+import BinaryTree from "./components/dsa/binary-tree.js";
+import SlidingWindow from "./components/dsa/sliding-window.js";
+import WebpackConcept from "./components/react-course/webpack/webpack-concept.js";
 
 function App() {
   return (
@@ -95,6 +99,7 @@ function App() {
           <MenuItem component={<Link to="/internal-concepts" />}>
             Internal Concepts{" "}
           </MenuItem>
+          <MenuItem component={<Link to="/webpack" />}>Webpack</MenuItem>
           <SubMenu label="System Design">
             <MenuItem component={<Link to="/networking" />}>
               Networking
@@ -106,9 +111,16 @@ function App() {
             <MenuItem component={<Link to="/database-and-caching" />}>
               Database/Caching
             </MenuItem>
+            <MenuItem component={<Link to="/security" />}>Security</MenuItem>
           </SubMenu>
           <SubMenu label="DSA">
             <MenuItem component={<Link to="/recursion" />}>Recursion</MenuItem>
+            <MenuItem component={<Link to="/sliding-window" />}>
+              Sliding Window
+            </MenuItem>
+            <MenuItem component={<Link to="/binary-tree" />}>
+              Binary Tree
+            </MenuItem>
             <MenuItem component={<Link to="/binary-search" />}>
               Binary Search
             </MenuItem>
@@ -135,7 +147,9 @@ function App() {
           <Route path="networking" element={<Networking />} />
           <Route path="communication" element={<Communication />} />
           <Route path="recursion" element={<Recursion />} />
+          <Route path="binary-tree" element={<BinaryTree />} />
           <Route path="binary-search" element={<BinarySearch />} />
+          <Route path="sliding-window" element={<SlidingWindow />} />
           <Route path="file-explorer" element={<FileExplorer />} />
           <Route path="advance-hooks" element={<AdvanceHooks />} />
           <Route path="reconciliation" element={<Reconciliation />} />
@@ -154,6 +168,8 @@ function App() {
           <Route path="database-and-caching" element={<DatabaseAndCaching />} />
           <Route path="typescript-intro" element={<TypescriptDemo />} />
           <Route path="react-ssr" element={<ReactSSR />} />
+          <Route path="security" element={<Security />} />
+          <Route path="webpack" element={<WebpackConcept />} />
         </Routes>
       </div>
     </div>

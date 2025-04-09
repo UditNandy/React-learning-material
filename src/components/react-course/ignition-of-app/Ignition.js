@@ -165,7 +165,7 @@ const Ignition = () => {
             'reactDOM/client' respectively.
           </li>
           <li>
-            Whenever we same a file our browser automatically refreshes and
+            Whenever we save a file our browser automatically refreshes and
             updates the latest content. This is known as HMR.
           </li>
           <li>

@@ -15,7 +15,7 @@ const Inception = () => {
             and has all the core algorithms of react.
           </li>
           <li>
-            Second file is reacr-dom.development.js which contains logic related
+            Second file is react-dom.development.js which contains logic related
             to DOM manipulation.
           </li>
           <li>
@@ -24,7 +24,7 @@ const Inception = () => {
           </li>
           <li>
             React core file gives the core logic where as the dom file gives the
-            dom manipulation.
+            dom manipulation logic.
           </li>
           <li>
             In case of react native which is used for mobile phones we can use
@@ -49,7 +49,7 @@ const Inception = () => {
             render it in the html file.
           </li>
           <li>
-            To create a element in react we can use{" "}
+            To create an element in react we can use{" "}
             <strong>createElement()</strong> method of{" "}
             <strong>React(comes from react core library)</strong> which takes 3
             parameters : tagname, attribute object and (array of
@@ -88,10 +88,10 @@ const Inception = () => {
           <li>
             Suppose we are having something within the root tag of out html in
             that case root.render of react will replace the content present
-            inside the root tag and will render the react elements inside
+            inside the root tag and will render the react elements inside.
           </li>
           <li>
-            If you want to have something alreay written inside react in that
+            If you want to have something already written inside react in that
             case you have to have a seperate div inside body and a seperate div
             for rendering react content.
           </li>
