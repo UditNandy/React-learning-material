@@ -3,6 +3,84 @@ import Accordian from "../shared/accordian/accordian";
 const WebPageRendering = () => {
   return (
     <>
+      <Accordian header="Browser Anatomy">
+        <ul>
+          <li>
+            <strong>UI Interface</strong> : This is everything we see and
+            interact with in our web browser, except for the actual web page we
+            are viewing, like adressbar, bookmarks, tabs, etc.
+          </li>
+          <li>
+            <strong>Browser Engine</strong> :{" "}
+            <ul>
+              <li>
+                This is everything you see and interact with in your web
+                browser, except for the actual web page you’re viewing.
+              </li>
+              <li>
+                It coordinates various tasks such as managing browser tabs,
+                handling user input events, managing browser history, and
+                interacting with plugins or extensions. The browser engine acts
+                as the core processing unit of the web browser, orchestrating
+                all the components to provide a seamless browsing experience.
+              </li>
+              <li>
+                Examples of browser engines include Blink (used in Google Chrome
+                and Microsoft Edge), Gecko (used in Firefox), and WebKit (used
+                in Safari).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Rendering Engine</strong> :
+            <ul>
+              <li>
+                The rendering engine, also known as the layout engine, reads
+                code (like CSS/HTML) to show web pages correctly on your screen.
+              </li>
+              <li>
+                Different browsers use different rendering engines: Internet
+                Explorer uses Trident, Firefox uses Gecko, Safari uses WebKit,
+                and Chrome/Opera use Blink (a version of WebKit).
+              </li>
+              <li>
+                The rendering engine first reads the HTML code and creates a
+                ‘content tree’ with elements. Then, it processes style data and
+                combines it with HTML to form a ‘render tree’ with visual
+                attributes.
+              </li>
+              <li>
+                After that, it lays out the elements on the screen, determining
+                their exact positions. Finally, it paints the elements on the
+                screen.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Networking</strong> : This component handles network calls,
+            such as HTTP requests and responses. It manages the communication
+            between the browser and web servers, ensuring that data is sent and
+            received correctly.
+          </li>
+          <li>
+            <strong>UI Backend</strong> : It is the backend of the UI interface.
+            It is used to draw basic widgets like combo boxes and windows. It
+            exposes a generic API that is not platform-specific.
+          </li>
+          <li>
+            <strong>JS Interpreter</strong> : As the name suggests, it is
+            responsible for parsing and executing the JavaScript code embedded
+            in a website. Once the interpreted results are generated, they are
+            forwarded to the rendering engine for display on the user interface.
+          </li>
+          <li>
+            <strong>Data Storage</strong> : It is a persistent layer. A web
+            browser needs to store various types of data locally, for example,
+            cookies. As a result, browsers must be compatible with data storage
+            mechanisms such as WebSQL, IndexedDB, FileSystem, etc.
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="1. Typing the url">
         <ul>
           <li>
@@ -125,6 +203,14 @@ const WebPageRendering = () => {
       </Accordian>
       <Accordian header="Notes">
         <ul>
+          <li>
+            <a
+              href="https://medium.com/@tsibo/how-browsers-work-basically-3c69676d11ee"
+              target="_blank"
+            >
+              Refer This article
+            </a>
+          </li>
           <li>
             HTML follows <strong>incremental rendering</strong> means it can be
             parsed part by part, as it is being downloaded. It is declarative in
