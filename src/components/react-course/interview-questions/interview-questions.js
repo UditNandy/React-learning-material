@@ -233,7 +233,11 @@ const InterviewQuestion = () => {
             <strong>Group different checkboxes or radios together.</strong>
           </li>
           <li>
-            <strong>Shadow DOM</strong>
+            <strong>Shadow DOM</strong> : Shadow DOM isolates your component's
+            structure and styles, making it easier to build reusable,
+            conflict-free UI components. It encapsulates html,js,css into a
+            single entity so that no style leakage happens. It is used in web
+            components.
           </li>
           <li>
             <strong>ARIA</strong>
@@ -245,10 +249,32 @@ const InterviewQuestion = () => {
             <strong>{"<meter>"}</strong>
           </li>
           <li>
-            <strong>defer and async attributes in the {"<script>"} tag</strong>
+            <strong>defer and async attributes in the {"<script>"} tag</strong>:
+            <ul>
+              <li>
+                <strong>async</strong> : It tells the browser to download the
+                script in the background while the rest of the page is loading.
+                Once the script is downloaded, it will be executed immediately,
+                which may block the rendering of the page. If there are more
+                then one scripts with async attribute then they will be executed
+                in the order they are downloaded and not in the order they are
+                defined in the html.
+              </li>
+              <li>
+                <strong>defer</strong> : It tells the browser to download the
+                script in the background while the rest of the page is loading.
+                Once the script is downloaded, it will wait for the html parsing
+                to finish and then the script will be executed. If there are
+                more then one scripts with defer attribute then they will be
+                executed in the order they are defined in the html.
+              </li>
+            </ul>
           </li>
           <li>
             <strong>preload</strong>
+          </li>
+          <li>
+            <strong>different types of content-type</strong>
           </li>
         </ul>
       </Accordian>

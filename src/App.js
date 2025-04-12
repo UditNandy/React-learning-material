@@ -31,6 +31,9 @@ import Security from "./components/system-design/security.js";
 import BinaryTree from "./components/dsa/binary-tree.js";
 import SlidingWindow from "./components/dsa/sliding-window.js";
 import WebpackConcept from "./components/react-course/webpack/webpack-concept.js";
+import WebPageRendering from "./components/system-design/webpage-rendering.js";
+import Array from "./components/dsa/array.js";
+import DP from "./components/dsa/dp.js";
 
 function App() {
   return (
@@ -101,6 +104,9 @@ function App() {
           </MenuItem>
           <MenuItem component={<Link to="/webpack" />}>Webpack</MenuItem>
           <SubMenu label="System Design">
+            <MenuItem component={<Link to="/webpage-rendering" />}>
+              How a webpage is rendered in browser.
+            </MenuItem>
             <MenuItem component={<Link to="/networking" />}>
               Networking
             </MenuItem>
@@ -114,6 +120,7 @@ function App() {
             <MenuItem component={<Link to="/security" />}>Security</MenuItem>
           </SubMenu>
           <SubMenu label="DSA">
+            <MenuItem component={<Link to="/array" />}>Array</MenuItem>
             <MenuItem component={<Link to="/recursion" />}>Recursion</MenuItem>
             <MenuItem component={<Link to="/sliding-window" />}>
               Sliding Window
@@ -124,6 +131,7 @@ function App() {
             <MenuItem component={<Link to="/binary-search" />}>
               Binary Search
             </MenuItem>
+            <MenuItem component={<Link to="/dp" />}>DP</MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding">
             <MenuItem component={<Link to="/file-explorer" />}>
@@ -170,6 +178,9 @@ function App() {
           <Route path="react-ssr" element={<ReactSSR />} />
           <Route path="security" element={<Security />} />
           <Route path="webpack" element={<WebpackConcept />} />
+          <Route path="webpage-rendering" element={<WebPageRendering />} />
+          <Route path="array" element={<Array />} />
+          <Route path="dp" element={<DP />} />
         </Routes>
       </div>
     </div>
