@@ -247,6 +247,56 @@ const DatabaseAndCaching = () => {
             </ul>
           </li>
         </ul>
+        <Accordian header="Cache Control">
+          <ul>
+            <li>
+              <strong>public</strong>: Indicates the response may be cached by
+              any cache, even if it is normally non-cacheable (e.g., private or
+              dynamic content).
+            </li>
+            <li>
+              <strong>private</strong>: Specifies that the response is specific
+              to a single user and should not be cached by shared caches (e.g.,
+              CDN or proxy servers).
+            </li>
+            <li>
+              <strong>no-cache</strong>: Forces the browser to revalidate the
+              cached content with the server before using it (it can still be
+              cached but must be validated first). Here for subsequest request
+              the browser will send the etag or last modified date to the server
+              and server will send 304 if the data is not modified and 200 if
+              the data is modified.
+            </li>
+            <li>
+              <strong>no-store</strong>: Prevents the caching of the resource
+              entirely; the browser must fetch it every time.
+            </li>
+            <li>
+              <strong>max-age</strong>: Specifies the maximum time (in seconds)
+              a resource is considered fresh; after this time, it must be
+              revalidated.
+            </li>
+            <li>
+              <strong>s-maxage</strong>: Similar to `max-age`, but it
+              specifically applies to shared caches (like CDNs and proxies) and
+              overrides `max-age`.
+            </li>
+            <li>
+              <strong>must-revalidate</strong>: Requires caches to verify the
+              freshness of a cached resource before using it, even after it
+              becomes stale.
+            </li>
+            <li>
+              <strong>proxy-revalidate</strong>: Same as `must-revalidate`, but
+              only applies to shared caches (like proxies or CDNs).
+            </li>
+            <li>
+              <strong>immutable</strong>: Tells the browser that the resource
+              will not change, so it can be cached forever and doesn't need to
+              be revalidated.
+            </li>
+          </ul>
+        </Accordian>
       </Accordian>
       <Accordian header="Service Worker Caching">
         <ul>
