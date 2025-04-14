@@ -34,6 +34,7 @@ import WebpackConcept from "./components/react-course/webpack/webpack-concept.js
 import WebPageRendering from "./components/system-design/webpage-rendering.js";
 import Array from "./components/dsa/array.js";
 import DP from "./components/dsa/dp.js";
+import Graph from "./components/dsa/graph.js";
 
 function App() {
   return (
@@ -132,6 +133,7 @@ function App() {
               Binary Search
             </MenuItem>
             <MenuItem component={<Link to="/dp" />}>DP</MenuItem>
+            <MenuItem component={<Link to="/graph" />}>Graph</MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding">
             <MenuItem component={<Link to="/file-explorer" />}>
@@ -181,6 +183,7 @@ function App() {
           <Route path="webpage-rendering" element={<WebPageRendering />} />
           <Route path="array" element={<Array />} />
           <Route path="dp" element={<DP />} />
+          <Route path="graph" element={<Graph />} />
         </Routes>
       </div>
     </div>

@@ -19,7 +19,7 @@ const DP = () => {
             <strong>Egg Dropping Problem (Memoized)</strong>
           </li>
           <li>
-            <strong>2 Keys Keyboard (Leetcode : 650)</strong>
+            <strong>2 Keys Keyboard (Leetcode : 650)</strong> ✅
           </li>
           <li>
             <strong>Perfect Squares (4 approaches) (Leetcode-279)</strong>

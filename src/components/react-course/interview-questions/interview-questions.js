@@ -45,12 +45,27 @@ const InterviewQuestion = () => {
           <li>
             <strong>How to optimize website assets loading?</strong>
             <ul>
-              <li>CDN hosting</li>
-              <li>File compression</li>
-              <li>File concatenation</li>
-              <li>Minify scripts</li>
-              <li>Parallel downloads</li>
-              <li>Lazy Loading</li>
+              <li>
+                <strong>CDN hosting</strong> : It is a globally distributed
+                network of servers that delivers content (like JS/CSS files,
+                images, videos) to users from the nearest location, reducing
+                latency and improving load speed
+              </li>
+              <li>
+                <strong>File compression</strong>
+              </li>
+              <li>
+                <strong>File concatenation</strong>
+              </li>
+              <li>
+                <strong>Minify scripts</strong>
+              </li>
+              <li>
+                <strong>Lazy Loading</strong>
+              </li>
+              <li>
+                <strong>Preload important assets</strong>
+              </li>
             </ul>
           </li>
           <li>
@@ -91,6 +106,7 @@ const InterviewQuestion = () => {
           <li>
             <strong>{'<meta charset="UTF-8">'}</strong> : It tells the browser
             which character encoding to use to correctly display your content.
+            (Unicode Transformation Format - 8 bits)
           </li>
           <li>
             <strong>
@@ -127,9 +143,11 @@ const InterviewQuestion = () => {
           <li>
             <strong>{"<datalist/>"}</strong> : It is used to provide a list of
             options for an
-            <strong>input</strong> element. It is used to create a dropdown list
-            of suggestions for the user to choose from. It is like
-            auto-suggestion. It is introduced in HTML5.
+            <strong> input</strong> element. It is used to create a dropdown
+            list of suggestions for the user to choose from. It is like
+            auto-suggestion. It is introduced in HTML5. To achieve this we need
+            to add a datalist tag with options inside it and add a id to it. The
+            id need to be attached to the list attribute of the input tag.
           </li>
           <li>
             <strong>Image map</strong> : The {"<map>"} and {"<area>"} tags
@@ -155,6 +173,7 @@ const InterviewQuestion = () => {
             <strong>drag and drop</strong> : Set draggable="true" in the element
             to make it draggable. We can use dragstart, dragenter, dragleave,
             dragover, drop and dragend events to handle the drag and drop.
+            Please implement it.
           </li>
           <li>
             <strong>
@@ -195,7 +214,11 @@ const InterviewQuestion = () => {
             <strong>Geolocation Api.</strong>
           </li>
           <li>
-            <strong>Web components.</strong>
+            <strong>Web components.</strong> : We can use{" "}
+            <strong>
+              customElements global object present in js to create a web
+              component. Like a new type of reusable button.
+            </strong>
           </li>
           <li>
             <strong>
@@ -230,7 +253,8 @@ const InterviewQuestion = () => {
             change the type.
           </li>
           <li>
-            <strong>Group different checkboxes or radios together.</strong>
+            <strong>Group different radios together.</strong> : Have seperate
+            radio buttons but give same name to all of them.
           </li>
           <li>
             <strong>Shadow DOM</strong> : Shadow DOM isolates your component's
@@ -240,7 +264,7 @@ const InterviewQuestion = () => {
             components.
           </li>
           <li>
-            <strong>ARIA</strong>
+            <strong>ARIA</strong> : (Accessible Rich Internet Applications )
           </li>
           <li>
             <strong>display:none vs visibility:hidden</strong>
@@ -271,10 +295,438 @@ const InterviewQuestion = () => {
             </ul>
           </li>
           <li>
-            <strong>preload</strong>
+            <strong>preload</strong> : It tells the browser to start fetching a
+            resource early, because it's needed soon for the current page. Eg :
+            fonts, images, scripts, etc.
           </li>
           <li>
-            <strong>different types of content-type</strong>
+            <strong>prefetch</strong> : It tells the browser to load resources
+            in the background, because they might be needed for the next page or
+            future navigation. Eg: js bundle for next page, images/scripts, etc.
+          </li>
+          <li>
+            <strong>different types of content-type</strong> : text/html,
+            text/css, text/javascript, image/png, image/jpeg, application/json,
+            multipart/form-data, etc.
+          </li>
+          <li>
+            <strong>srcset attribute in img</strong> : It helps us to provide
+            different src for different screen size.
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header="CSS">
+        <ul>
+          <li>
+            <strong>How is css render blocking</strong> : It is render blocking
+            because we need to construct the cssom before we can render the
+            page. So if we have a css file which is not loaded then the browser
+            will not be able to render the page. So we need to load the css file
+            before rendering the page.
+          </li>
+          <li>
+            <strong>Different units of css</strong> :{" "}
+            <ul>
+              <li>
+                <strong>px</strong>: It is an absolute unit of measurement. It
+                is not responsive.
+              </li>
+              <li>
+                <strong>em</strong>: Relative to the font-size of the parent
+                element. Can compound, meaning nesting can multiply sizes if
+                you're not careful.
+              </li>
+              <li>
+                <strong>rem</strong> : Relative to the root {"(<html>)"} font
+                size.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Box Model in CSS</strong>
+          </li>{" "}
+          <li>
+            <strong>Limitations of CSS</strong> :{" "}
+            <ul>
+              <li>
+                <strong>There is no parent selector </strong>: Currently, Using
+                CSS, you can’t select a parent tag.
+              </li>
+              <li>
+                <strong>Cross Browser issue</strong> : Some selectors behave
+                differently in a different browser).
+              </li>
+              <li>
+                <strong>Browser Compatibility </strong>: Some style selectors
+                are supported and some are not. We have to determine which style
+                is supported or not using the @support selector).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Different ways to embedd css.</strong> :{" "}
+            <ul>
+              <li>External CSS (link tag)</li>
+              <li>Inline CSS</li>
+              <li>Style tag</li>
+              <li>Import tag</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Different types of css selectors</strong> :{" "}
+            <ul>
+              <li>
+                <strong>Universal Selector (*)</strong>
+              </li>
+              <li>
+                <strong>Element Selector</strong>
+              </li>
+              <li>
+                <strong>Class Selector</strong>
+              </li>
+              <li>
+                <strong>ID Selector</strong>
+              </li>
+              <li>
+                <strong>Descendant Combinator (p div) </strong>: Selects all the
+                div tags inside p tag.
+              </li>
+              <li>
+                <strong>Child Combinator {"(p>div)"}</strong> : Selects all the
+                div tags which are direct child of p tag.
+              </li>
+              <li>
+                <strong>General Sibling Combinator {"(div~p)"} </strong>: It
+                selects all the p tags which are sibling to div tag. and comes
+                after the div tag.
+              </li>
+              <li>
+                <strong>Adjacent Sibling Combinator {"(div+p)"} </strong>: It
+                will only select the first immediate sibling p tag to div. If
+                there are more than one p tag then it will not select them. If
+                any other tag comes in between div and p so p will not be
+                selected.
+              </li>
+              <li>
+                In case of combinator the selection happens from right to left.
+                Example browser first finds all the p tags and then it filter
+                outs which p tag are child/sibling to div tags.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>CSS Preprocessors</strong> :{" "}
+            <ul>
+              <li>
+                A CSS Preprocessor is a tool used to extend the basic
+                functionality of default vanilla CSS through its own scripting
+                language. It helps us to use complex logical syntax like –
+                variables, functions, mixins, code nesting, and inheritance to
+                name a few, supercharging your vanilla CSS.
+              </li>
+              <li>
+                It uses 2 extensions .sass(it uses indeddation and not curly
+                braces) and .scss (it uses curly braces).
+              </li>
+            </ul>
+          </li>{" "}
+          <li>
+            <strong>
+              What is VH/VW (viewport height/ viewport width) in CSS?
+            </strong>{" "}
+            : It is a unit of measurement in CSS that is relative to the size of
+            the viewport. 1vh is equal to 1% of the height of the viewport, and
+            1vw is equal to 1% of the width of the viewport.
+          </li>{" "}
+          <li>
+            <strong>Reset CSS </strong> : CSS resets aim to remove all built-in
+            browser styling. For example margins, paddings, font-sizes of all
+            elements are reset to be the same.
+          </li>{" "}
+          <li>
+            <strong>Normalize CSS</strong> : Normalize CSS aims to make built-in
+            browser styling consistent across browsers. It also corrects bugs
+            for common browser dependencies. It sets a default styling across
+            the browser.
+          </li>{" "}
+          <li>
+            <strong>inline vs inline-block vs block</strong> : inline-block is
+            responsive and can have width and height. inline is not responsive
+            and cannot have width and height. Inline elements cannot have margin
+            top and bottom. Block is responsive and can have width and height.
+          </li>{" "}
+          <li>
+            <strong>Pseudo elements</strong>:
+            <ul>
+              <li>
+                <strong>::before </strong>: Adds content before the element
+              </li>
+              <li>
+                <strong>::after </strong>: Adds content after the element
+              </li>
+              <li>
+                <strong>::first-letter </strong>: Targets the first letter of
+                the element.
+              </li>
+              <li>
+                <strong>::first-line </strong>: Targets the first line of the
+                element.
+              </li>
+              <li>
+                <strong>::selection</strong> : Targets the selected text in the
+                element.(for example when we select a text in the browser using
+                cursor dragging).
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Pseudo Class</strong> :{" "}
+            <ul>
+              <li>
+                <strong>:link</strong>
+              </li>
+              <li>
+                <strong>:hover</strong>
+              </li>
+              <li>
+                <strong>:visited</strong>
+              </li>
+              <li>
+                <strong>:active</strong>
+              </li>
+              <li>
+                <strong>:nth-child(n) and nth-of-type(even/odd)</strong>
+              </li>
+              <li>
+                <strong>:focus</strong>
+              </li>
+            </ul>
+          </li>{" "}
+          <li>
+            <strong>Cascading</strong> : Cascading in CSS refers to the order of
+            precedence that determines which style rules are applied to an
+            element when multiple conflicting styles are defined for that
+            element.
+          </li>
+          <li>
+            <strong>Adaptive Design</strong> : Desiging the UI based on some
+            fixed layouts.
+          </li>
+          <li>
+            <strong>Responsive Design</strong> : Responsive design focuses on
+            showing content on the basis of available browser space.
+          </li>
+          <li>
+            <strong>border-box vs content-box vs padding-box</strong> :
+            <ul>
+              <li>
+                <strong>content-box</strong> : Default box model as the name
+                suggests the specified height width contains only the content.
+                The final height and width will be padding + border + content.
+              </li>
+              <li>
+                <strong>border-box</strong> : The specified height and width
+                will contains content + padding + border. The final height and
+                width will be same as the specified height and width.
+              </li>
+              <li>
+                <strong>Padding-box </strong> : Width and height values apply to
+                the element's content and its padding. The border is added to
+                the outside of the box. Currently, only Firefox supports the
+                padding-box value.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>float</strong> : Used to align an element to left or right
+            of its container.
+          </li>
+          <li>
+            <strong>z-index</strong>
+          </li>
+          <li>
+            <strong>grid vs flexbox</strong> : grid is used to create 2D layouts
+            and flexbox is used to create 1D layouts.
+          </li>
+          <li>
+            <strong>positions</strong> :
+            <ul>
+              <li>
+                <strong>absolute</strong>
+              </li>
+              <li>
+                <strong>relative</strong>
+              </li>
+              <li>
+                <strong>static</strong>
+              </li>
+              <li>
+                <strong>fixed</strong>
+              </li>
+              <li>
+                <strong>sticky</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>DOM reflow</strong> : It is the name of the web browser
+            process for re-calculating the positions and geometries of elements
+            in the document, for the purpose of re-rendering part or all of the
+            document.
+          </li>
+          <li>
+            <strong>Center align a div</strong> :{" "}
+            <ul>
+              <li>Using position relative and absolute(with transform)</li>
+              <li>Using flex box</li>
+            </ul>
+          </li>
+          <li>
+            <strong>@media properties</strong> :{" "}
+            <ul>
+              <li>
+                <strong>all</strong> : It’s the default property. Used for all
+                media-type devices.
+              </li>
+              <li>
+                <strong>Screen</strong> : Used for computer screen, mobile
+                screen.
+              </li>
+              <li>
+                <strong>Print</strong> : Used for printers.
+              </li>
+              <li>
+                <strong>Speech</strong> : Used for screen readers.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Different ways to hide element</strong> :{" "}
+            <ul>
+              <li>
+                <strong>Display none</strong>
+              </li>
+              <li>
+                <strong>Visibility Hidden</strong>
+              </li>
+              <li>
+                <strong>Position Absolute</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>:root</strong> : It’s most commonly used to define CSS
+            variables (custom properties) that can be accessed globally. These
+            variables can be used anywhere in the CSS file, making it easier to
+            maintain and update styles. It is used to target the root element of
+            the document, which is usually the {"<html>"} element. We can even
+            use html to define the css but :root has higher specificity.
+          </li>
+          <li>
+            <strong>calc()</strong>
+          </li>{" "}
+          <li>
+            <strong>custom variables in css.</strong>
+          </li>{" "}
+          <li>
+            <strong>css vs sass variables</strong>
+          </li>{" "}
+          <li>
+            <strong>!important</strong> : The style will take the highest
+            precedence
+          </li>{" "}
+          <li>
+            <strong>specificity</strong> : A process of determining which CSS
+            rule will be applied to an element. It actually determines which
+            rules will take precedence. Inline style usually wins then ID then
+            the class value (or pseudo-class or attribute selector), the
+            universal selector (*) has no specificity. ID selectors have a
+            higher specificity than attribute selectors. If two rules have the
+            same specificity, the one that appears last in the CSS will be
+            applied.
+          </li>{" "}
+          <li>
+            <strong>progressive rendering</strong> : Progressive rendering is
+            the process of improving the performance of a webpage for loading
+            time to display the content speedily. The use of loading the lazy
+            loading of the image with the help of Intersection Observer API via
+            viewport.
+          </li>{" "}
+          <li>
+            <strong>width, max-width, min-width</strong>
+          </li>{" "}
+          <li>
+            <strong> gradients in CSS</strong>
+          </li>{" "}
+          <li>
+            <strong>object-fit</strong>
+          </li>{" "}
+          <li>
+            <strong>CSS paint API</strong>
+          </li>{" "}
+          <li>
+            <strong>clip-path</strong>
+          </li>{" "}
+          <li>
+            <strong>CSS Counters</strong> : CSS Counters are variables
+            maintained by CSS whose values can be incremented by CSS rules to
+            track how many times they're used. They're often used for
+            automatically numbering sections of a document or for creating
+            complex numbered lists. They're manipulated using the counter-reset,
+            counter-increment, and counter() properties and functions.
+          </li>{" "}
+          <li>
+            <strong>progressive enhancement and graceful degradation.</strong> :
+            Progressive enhancement starts with a basic, functional version of a
+            website that works for all users, then adds advanced features for
+            browsers that support them. Graceful degradation starts with a
+            fully-featured website and ensures it remains functional (albeit
+            with reduced features) on older browsers. Progressive enhancement is
+            generally preferred as it ensures a base level of functionality for
+            all users.
+          </li>{" "}
+          <li>
+            <strong>CSS Containment and the contain property</strong>
+          </li>
+          <li>
+            <strong>stacking context</strong>
+          </li>
+          <li>
+            <strong>How do you select elements by attribute in CSS?</strong> :
+            <ul>
+              <li>
+                Exact Match: [] selects an exact attribute value.
+                ([class="important"])
+              </li>
+              <li>
+                Value Starts With: [^] targets attributes with specified
+                starting values. ([href^="https"])
+              </li>
+              <li>
+                Case Insensitive: Selectors are usually case-sensitive, but by
+                using i, you can make them case-insensitive. ([alt="home" i])
+              </li>
+            </ul>
+            progressive rendering
+          </li>
+          <li>
+            <strong>@ rules</strong> : special instructions that start with @
+            and control how CSS behaves. Example @media, @import, @font-face,
+            @keyframes, @supports, @namespace, @page.
+          </li>
+          <li>
+            <a
+              href="https://github.com/Devinterview-io/css-interview-questions"
+              target="_blank"
+            >
+              CSS Important Questions
+            </a>
+            <a
+              href="https://www.simplilearn.com/tutorials/css-tutorial/css-interview-questions"
+              target="_blank"
+            >
+              CSS Important Question (2)
+            </a>
           </li>
         </ul>
       </Accordian>
