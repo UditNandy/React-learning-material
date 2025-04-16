@@ -35,6 +35,7 @@ import WebPageRendering from "./components/system-design/webpage-rendering.js";
 import Array from "./components/dsa/array.js";
 import DP from "./components/dsa/dp.js";
 import Graph from "./components/dsa/graph.js";
+import TabForm from "./components/machine-coding/tab-form/tab-form.js";
 
 function App() {
   return (
@@ -139,6 +140,7 @@ function App() {
             <MenuItem component={<Link to="/file-explorer" />}>
               File Explorer
             </MenuItem>
+            <MenuItem component={<Link to="/tab-form" />}>Tab Form</MenuItem>
           </SubMenu>
           <MenuItem component={<Link to="/interview-questions" />}>
             Interview Questions
@@ -161,6 +163,7 @@ function App() {
           <Route path="binary-search" element={<BinarySearch />} />
           <Route path="sliding-window" element={<SlidingWindow />} />
           <Route path="file-explorer" element={<FileExplorer />} />
+          <Route path="tab-form" element={<TabForm />} />
           <Route path="advance-hooks" element={<AdvanceHooks />} />
           <Route path="reconciliation" element={<Reconciliation />} />
           <Route path="react-router" element={<ReactRouter />} />
