@@ -39,6 +39,7 @@ import TabForm from "./components/machine-coding/tab-form/tab-form.js";
 import NestedCheckbox from "./components/machine-coding/nested-checkbox/nested-checkbox.js";
 import AutoComplete from "./components/machine-coding/auto-complete/auto-complete.js";
 import Pagination from "./components/machine-coding/pagination/pagination.js";
+import ProgressBar from "./components/machine-coding/progress-bar/progress-bar.js";
 
 function App() {
   return (
@@ -153,6 +154,9 @@ function App() {
             <MenuItem component={<Link to="/pagination" />}>
               Pagination
             </MenuItem>
+            <MenuItem component={<Link to="/progress-bar" />}>
+              Progress Bar
+            </MenuItem>
           </SubMenu>
           <MenuItem component={<Link to="/interview-questions" />}>
             Interview Questions
@@ -202,6 +206,7 @@ function App() {
           <Route path="nested-checkbox" element={<NestedCheckbox />} />
           <Route path="auto-complete" element={<AutoComplete />} />
           <Route path="pagination" element={<Pagination />} />
+          <Route path="progress-bar" element={<ProgressBar />} />
         </Routes>
       </div>
     </div>

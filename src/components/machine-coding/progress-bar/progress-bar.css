@@ -1,0 +1,15 @@
+.progress-bar-container {
+  width: 30em;
+  height: 1.5em;
+  border: 1px solid blue;
+  border-radius: 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: blue;
+  border-radius: inherit;
+  position: absolute;
+  transition: width 0.3s ease-in;
+}
