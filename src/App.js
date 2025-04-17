@@ -37,6 +37,7 @@ import DP from "./components/dsa/dp.js";
 import Graph from "./components/dsa/graph.js";
 import TabForm from "./components/machine-coding/tab-form/tab-form.js";
 import NestedCheckbox from "./components/machine-coding/nested-checkbox/nested-checkbox.js";
+import AutoComplete from "./components/machine-coding/auto-complete/auto-complete.js";
 
 function App() {
   return (
@@ -145,6 +146,9 @@ function App() {
             <MenuItem component={<Link to="/nested-checkbox" />}>
               Nested Checkbox
             </MenuItem>
+            <MenuItem component={<Link to="/auto-complete" />}>
+              Auto Complete
+            </MenuItem>
           </SubMenu>
           <MenuItem component={<Link to="/interview-questions" />}>
             Interview Questions
@@ -192,6 +196,7 @@ function App() {
           <Route path="dp" element={<DP />} />
           <Route path="graph" element={<Graph />} />
           <Route path="nested-checkbox" element={<NestedCheckbox />} />
+          <Route path="auto-complete" element={<AutoComplete />} />
         </Routes>
       </div>
     </div>
