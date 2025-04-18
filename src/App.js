@@ -40,6 +40,7 @@ import NestedCheckbox from "./components/machine-coding/nested-checkbox/nested-c
 import AutoComplete from "./components/machine-coding/auto-complete/auto-complete.js";
 import Pagination from "./components/machine-coding/pagination/pagination.js";
 import ProgressBar from "./components/machine-coding/progress-bar/progress-bar.js";
+import MachineCoding from "./components/machine-coding/machine-coding.js";
 
 function App() {
   return (
@@ -141,6 +142,9 @@ function App() {
             <MenuItem component={<Link to="/graph" />}>Graph</MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding">
+            <MenuItem component={<Link to="/machine-coding-question" />}>
+              Important Question
+            </MenuItem>
             <MenuItem component={<Link to="/file-explorer" />}>
               File Explorer
             </MenuItem>
@@ -207,6 +211,7 @@ function App() {
           <Route path="auto-complete" element={<AutoComplete />} />
           <Route path="pagination" element={<Pagination />} />
           <Route path="progress-bar" element={<ProgressBar />} />
+          <Route path="machine-coding-question" element={<MachineCoding />} />
         </Routes>
       </div>
     </div>
