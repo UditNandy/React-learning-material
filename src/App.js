@@ -41,7 +41,6 @@ import AutoComplete from "./components/machine-coding/auto-complete/auto-complet
 import Pagination from "./components/machine-coding/pagination/pagination.js";
 import ProgressBar from "./components/machine-coding/progress-bar/progress-bar.js";
 import MachineCoding from "./components/machine-coding/machine-coding.js";
-
 function App() {
   return (
     <div className="view-page">
