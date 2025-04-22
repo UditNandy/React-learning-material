@@ -731,7 +731,7 @@ const InterviewQuestion = () => {
         </ul>
       </Accordian>
       <Accordian header="Javascript">
-        <ul>
+        <ol>
           <li>
             <strong>Global Objects of BOM and DOM</strong>:
             <ul>
@@ -746,7 +746,13 @@ const InterviewQuestion = () => {
           <li>
             <strong>innerwidth vs outerwidth</strong>
           </li>
-        </ul>
+          <li>
+            Whats the use of <strong>Promise.resolve()</strong> and{" "}
+            <strong>Promise.reject()</strong>
+          </li>
+          <li>Garbage Collection in js</li>
+          <li>Map vs WeakMap</li>
+        </ol>
       </Accordian>
       <Accordian header="Virtual DOM and Rendering">
         <ol>

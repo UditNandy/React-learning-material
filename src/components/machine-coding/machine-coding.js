@@ -126,7 +126,7 @@ const MachineCoding = () => {
           <ol>
             <li>Implement a chain calculator.</li>
             <li>Execute promises in sequence. ✅</li>
-            <li>Implement pipe and compose functions.</li>
+            <li>Implement pipe and compose functions. ✅</li>
             <li>Create custom array polyfills.</li>
             <li>Demonstrate prototype and prototype inheritance.</li>
             <li>Implement call, apply, and bind methods.</li>
@@ -142,7 +142,7 @@ const MachineCoding = () => {
             <li>Build a typeahead search using an LRU cache.</li>
             <li>Compare two documents for differences.</li>
             <li>Implement currying.</li>
-            <li>Execute tasks in parallel.</li>
+            <li>Execute tasks in parallel. ✅</li>
             <li>Find the matching element in the DOM.</li>
             <li>Implement array sorting.</li>
             <li>Flatten a complex object.</li>
@@ -150,13 +150,20 @@ const MachineCoding = () => {
             <li>Perform a deep clone of an object.</li>
             <li>Serialize data using JSON.stringify.</li>
             <li>Explain the React DOM rendering process.</li>
-            <li>Retry a promise N times on failure.</li>
+            <li>Retry a promise N times on failure. ✅</li>
             <li>Extend the functionality of an event emitter.</li>
             <li>Implement Promise.all functionality. ✅</li>
-            <li>Implement Promise.race functionality.</li>
-            <li>Implement Promise.any functionality.</li>
-            <li>Implement Promise.allSettled functionality.</li>
+            <li>Implement Promise.race functionality. ✅</li>
+            <li>Implement Promise.any functionality. ✅</li>
+            <li>Implement Promise.allSettled functionality. ✅</li>
             <li>Find corresponding node in two identical DOM tree. ✅</li>
+            <li>Implement clearAllTimeout(). ✅</li>
+            <li>
+              Implement async helper - <strong>race()</strong>. ✅
+            </li>
+            <li>
+              Implement async helper - <strong>parallel()</strong>. ✅
+            </li>
           </ol>
         </strong>
       </Accordian>
