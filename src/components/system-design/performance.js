@@ -231,9 +231,272 @@ const Performance = () => {
         </ul>
       </Accordian>
       <Accordian header="Network Layer Optimisation">
-        <ul>
-          <li></li>
-        </ul>
+        <Accordian header="Critical Rendering Path">
+          <ul>
+            <li>
+              When we make a request from the client to the server the server
+              sends the response.
+            </li>
+            <li>The server sends the response in form of small packets.</li>
+            <li>We can focus on showing something meaningful on the FCP.</li>
+          </ul>
+        </Accordian>
+        <Accordian header="Minimize Network Calls">
+          <ul>
+            <li>
+              One network request with more data is better then multiple
+              requests with less data at the same time.
+            </li>
+            <li>
+              This is because each network call involves handshakes, network
+              latency, etc.
+            </li>
+            <li>
+              Challenges with multiple requests :{" "}
+              <ul>
+                <li>Connection Time</li>
+                <li>Browser Limits (6-10 max parallel calls can be made).</li>
+              </ul>
+            </li>
+            <li>
+              Solutions :{" "}
+              <ul>
+                <li>
+                  Inline CSS and JS for Critical Rendering Path. Using inline
+                  means not in the components in the index.html directly.
+                  Components are going to be converted into bundles.
+                </li>
+                <li>Images should be base 64.</li>
+                <li>
+                  Use SVGs for images. In case of svg we are not
+                  loading/fetching them we are actually injecting them in the
+                  code itself.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </Accordian>
+        <Accordian header="Async/Defer">
+          <img
+            style={{
+              marginTop: "10px",
+              height: "100%",
+              width: "100%",
+            }}
+            src="./assets/icons/async-vs-defer.png"
+            alt="Async vs defer"
+          ></img>
+          <ul>
+            <li>
+              WJavascript is parser block so when html will encounter a script
+              tag it will pause parsing html file and it will download the
+              script file then parse it and once the js parsing is done it will
+              resume parsing HTML file.
+            </li>
+            <li>Because of this reason our FCP,LCP will be delayed.</li>
+            <li>
+              We can even keep the script tag at the last of body tag but it
+              will again effect the first interactivity.
+            </li>
+            <li>To overcome it we can use async or defer.</li>
+            <li>
+              <strong>async</strong> : Here as soon as the HTML encounters the
+              script tag it will start downloading it in parallel, and once the
+              script is downloaded it will stop the HTML parsing and will parse
+              the JS file.
+            </li>
+            <li>
+              <strong>defer</strong> : Here as soon as script tag is encountered
+              it will start downloading the the script tag but the HTML parsing
+              will not stop.Once the script is downloaded it will wait for HTML
+              to finish parsing and after that the script will be parsed.
+            </li>
+          </ul>
+        </Accordian>
+        <Accordian header="Avoid Redirection">
+          <ul>
+            <li>We should avoid redirection from http to https.</li>
+            <li>
+              We can achieve it using{" "}
+              <strong>hstspreload.org (HTTPs Strict Transport Security)</strong>
+            </li>
+            <li>
+              We can see that suppose we try to load flipkart.com using http
+              then also in networ k tab all the requests are of https and not a
+              single request is made using http.
+            </li>
+            <li>Most of the browsers have a list HSTS preload lists.</li>
+            <li>
+              Here the browser will check for the domain is present or not and
+              if its present in its list then it will automatically upgrade the
+              request from http to https, and http call will not be made to the
+              server.
+            </li>
+            <li>
+              In this way request is not going to the server and getting
+              upgraded. Its getting upgraded directly in the browser level.
+            </li>
+          </ul>
+        </Accordian>
+        <Accordian header="Resource Hinting">
+          <ul>
+            <li>
+              In general we load both same domain css, js, fonts and cross
+              domain css, js, fonts.
+            </li>
+            <li>
+              <strong>preconnect</strong> :
+              <ul>
+                <li>
+                  <strong>
+                    <pre>
+                      {`<link ref="preconnect" href="https://cdn.glicth.global" crossorigin></link>`}
+                    </pre>
+                  </strong>
+                </li>
+                <li>
+                  So here the connection that would have happen at the time of
+                  api call will be done earlier, and at the time of api call no
+                  new connection needs to be established.
+                </li>
+                <li>
+                  Here as the origin is different so we have to add cross
+                  origin. It includes{" "}
+                  <strong>dns-lookup, initial connection, ssl ,etc.</strong>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>dns-prefetch</strong> :
+              <ul>
+                <li>
+                  <strong>
+                    <pre>
+                      {`<link ref="dns-prefetch" href="https://cdn.glicth.global" crossorigin></link>`}
+                    </pre>
+                  </strong>
+                </li>
+                <li>
+                  Here we will only make the dns lookup before hand. time.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>preload</strong> :{" "}
+              <ul>
+                <li>Here the resource will be downloaded before hand.</li>
+                <li>
+                  Here not only the connection is being established but also the
+                  content is getting downloaded.
+                </li>
+                <li>We can preload the banner images, fonts, etc.</li>
+                <li>
+                  <strong>
+                    <pre>{`<link ref="preload" href="" as=''></link>`}</pre>
+                  </strong>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>prefetch</strong> :
+              <ul>
+                <li>
+                  Load Resources which are needed in near future like not in the
+                  same page with low priority.
+                </li>
+                <li>
+                  <strong>
+                    <pre>{`<link ref="prefetch" href="" as=''></link>`}</pre>
+                  </strong>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>pre-render</strong> :{" "}
+              <ul>
+                <li>
+                  Here the upcomming routes will be rendered and will be stored
+                  in cache for future use.
+                </li>
+                <li>
+                  The page is their in the cache will be used as soon as
+                  requested.
+                </li>
+                <li>
+                  In case of angular and react as they make SPAs so pre render
+                  is of no use we can use server side rendering or static pre
+                  redering where we will pre-render different routes durring the
+                  build time.
+                </li>
+              </ul>
+            </li>
+            <li>
+              For all these linkes we have a priority attibute which will tell
+              the browser about the priority of these links .
+            </li>
+            <li>
+              We can also preload css files without blocking blocking the
+              render.
+              <strong>
+                <pre>{`<link rel="preload" href="theme.css" as="style" fetchpriority = "low" onload="this.onload=null;this.rel='stylesheet'">`}</pre>
+              </strong>
+            </li>
+          </ul>
+        </Accordian>
+        <Accordian header="Early Hints">
+          <ul>
+            <li>We are going to get early hints from the server.</li>
+            <li>
+              It is quite similar to resource hinting but it is done by server.
+            </li>
+            <li>
+              Here we are getting the resources even before the index.html was
+              loaded.
+            </li>
+          </ul>
+        </Accordian>
+        <Accordian header="HTTP Upgrade (Http1.1 vs Http2 vs Http3)">
+          <ul>
+            <li>
+              Higher the http version more number of parallel network request we
+              can make. So it better to upgrade the http latest version.
+            </li>
+          </ul>
+        </Accordian>
+        <Accordian header="Compression : brotli / gzip">
+          <ul>
+            <li>Here the content is compressed.</li>
+            <li>It is actually content encoding.</li>
+            <li>This needs to be enabled from the server.</li>
+          </ul>
+        </Accordian>
+        <Accordian header="Caching">
+          <ul>
+            <li>Here we can use cache headers.</li>
+            <li>We can also get the make use of service worker caching.</li>
+          </ul>
+        </Accordian>
+      </Accordian>
+      <Accordian header="Rendering Pattern">
+        <Accordian header="Client Side Rendering"></Accordian>
+        <Accordian header="Server Side Rendering"></Accordian>
+        <Accordian header="Static Site Generation"></Accordian>
+        <Accordian header="React Server Component"></Accordian>
+      </Accordian>
+      <Accordian header="Build Optimisation">
+        <Accordian header="Bundler">
+          <ul>
+            <li>
+              It converts all the framework code or other js code into browser
+              readable/compatible js code.
+            </li>
+            <li>Helps in making module management.</li>
+            <li>Optimisation</li>
+            <li>Development Enhancements : Hot Module Reload</li>
+            <li>Cross Browser Compactibility</li>
+            <li>Asset Management</li>
+          </ul>
+        </Accordian>
       </Accordian>
       <Accordian header="Interview Questions">
         <ul>
