@@ -89,6 +89,11 @@ const AdditionalConcepts = () => {
             Remember we cannot simply pass refs as a regular props because refs
             are reserved keywords and not a normal prop.
           </li>
+          <li>
+            There's an alternate of forwardRef too and that is by passing the
+            ref to the child using props but using a name other then ref. We can
+            attach that prop to the ref attribute in the child component.
+          </li>
         </ul>
       </Accordian>
       <ForwardRefDemo hello="123" ref={demoRef} />

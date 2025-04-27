@@ -41,6 +41,7 @@ import AutoComplete from "./components/machine-coding/auto-complete/auto-complet
 import Pagination from "./components/machine-coding/pagination/pagination.js";
 import ProgressBar from "./components/machine-coding/progress-bar/progress-bar.js";
 import MachineCoding from "./components/machine-coding/machine-coding.js";
+import Performance from "./components/system-design/performance.js";
 function App() {
   return (
     <div className="view-page">
@@ -122,6 +123,9 @@ function App() {
             </MenuItem>
             <MenuItem component={<Link to="/database-and-caching" />}>
               Database/Caching
+            </MenuItem>
+            <MenuItem component={<Link to="/performance" />}>
+              Performance
             </MenuItem>
             <MenuItem component={<Link to="/security" />}>Security</MenuItem>
           </SubMenu>
@@ -211,6 +215,7 @@ function App() {
           <Route path="pagination" element={<Pagination />} />
           <Route path="progress-bar" element={<ProgressBar />} />
           <Route path="machine-coding-question" element={<MachineCoding />} />
+          <Route path="performance" element={<Performance />} />
         </Routes>
       </div>
     </div>

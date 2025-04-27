@@ -378,6 +378,12 @@ const Foundation = () => {
             How are different build tools (parcel,webpack,vite,etc) different
             and which one should we use.
           </li>
+          <li>
+            What will happen if we dont start the react functional component
+            name with capital letter. {"->"} While calling the component in the
+            jsx react will not treat it as a html tag and not as a React
+            Component.
+          </li>
         </ul>
       </Accordian>
       <Accordian header="Notes">

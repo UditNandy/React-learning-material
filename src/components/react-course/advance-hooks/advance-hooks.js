@@ -146,7 +146,7 @@ const AdvanceHooks = () => {
           </li>
           <li>
             To access the values of context we can use a hook
-            <strong>useContext</strong> and we can get the data anywhere in the
+            <strong> useContext</strong> and we can get the data anywhere in the
             app.
           </li>
           <li>This useContext takes the context variable that we created.</li>
@@ -193,7 +193,7 @@ const AdvanceHooks = () => {
           </li>
           <li>Its recommended start with word use.</li>
           <li>
-            Although its not recommended to use the word use but lot of projects
+            Although its not mandatory to use the word use but lot of projects
             has a linter and it might throw error because of our coding
             practices.
           </li>
@@ -256,7 +256,7 @@ const AdvanceHooks = () => {
         <ul>
           <li>
             If you are providing a new value but you have only wrapped a certain
-            amount of code and not the while code then remember only the
+            amount of code and not the whole code then remember only the
             children of the wrapped code will get the updated value. Rest
             everywhere you will get the old/default value. Based on requirement
             you need to choose if you want to provide the updated value to

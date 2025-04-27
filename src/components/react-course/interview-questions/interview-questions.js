@@ -752,6 +752,19 @@ const InterviewQuestion = () => {
           </li>
           <li>Garbage Collection in js</li>
           <li>Map vs WeakMap</li>
+          <li>
+            What are the parametes that map and filter takes :{" "}
+            <strong>
+              callback and thisArgs(used to control the this of callback
+              function)
+            </strong>
+            . Reduce donot take thisArgs .
+          </li>
+          <li>
+            What are the params that the callback method of map and filter
+            takes. : <strong>currVal,index,currentArray(this).</strong> Reduce
+            takes acc as well.
+          </li>
         </ol>
       </Accordian>
       <Accordian header="Virtual DOM and Rendering">

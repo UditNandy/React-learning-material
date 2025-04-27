@@ -279,6 +279,7 @@ const Ignition = () => {
           <li>
             How the bundling process will be in case of lazy loaded components.
           </li>
+          <li>What is consistent hashing.</li>
         </ul>
       </Accordian>
     </>

@@ -86,7 +86,7 @@ const Inception = () => {
             reason why we need JSX.
           </li>
           <li>
-            Suppose we are having something within the root tag of out html in
+            Suppose we are having something within the root tag of our html in
             that case root.render of react will replace the content present
             inside the root tag and will render the react elements inside.
           </li>
