@@ -42,6 +42,7 @@ import Pagination from "./components/machine-coding/pagination/pagination.js";
 import ProgressBar from "./components/machine-coding/progress-bar/progress-bar.js";
 import MachineCoding from "./components/machine-coding/machine-coding.js";
 import Performance from "./components/system-design/performance.js";
+import ServiceWorkers from "./components/system-design/service-workers.js";
 function App() {
   return (
     <div className="view-page">
@@ -128,6 +129,9 @@ function App() {
               Performance
             </MenuItem>
             <MenuItem component={<Link to="/security" />}>Security</MenuItem>
+            <MenuItem component={<Link to="/service-workers" />}>
+              Service Workers
+            </MenuItem>
           </SubMenu>
           <SubMenu label="DSA">
             <MenuItem component={<Link to="/array" />}>Array</MenuItem>
@@ -216,6 +220,7 @@ function App() {
           <Route path="progress-bar" element={<ProgressBar />} />
           <Route path="machine-coding-question" element={<MachineCoding />} />
           <Route path="performance" element={<Performance />} />
+          <Route path="service-workers" element={<ServiceWorkers />} />
         </Routes>
       </div>
     </div>

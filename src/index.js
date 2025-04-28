@@ -14,6 +14,17 @@ import { ClientSideRowModelModule } from "ag-grid-community";
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+if (navigator.serviceWorker) {
+  navigator.serviceWorker
+    .register("./sw.js", { scope: "./" })
+    .then((res) => {
+      console.log("Service Worker Registered");
+    })
+    .catch((err) => {
+      console.log("Error registering", err);
+    });
+}
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
