@@ -28,6 +28,7 @@ const BinarySearch = () => {
               </li>
             </ul>
           </li>
+          <li>Count Negative Numbers in a Sorted Matrix</li>
         </ol>
       </Accordian>
       <Accordian header="Medium">
