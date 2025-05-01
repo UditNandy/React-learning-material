@@ -70,7 +70,6 @@ const ReduxNotes = () => {
                 This is used to make logical seperation between the states
                 inside the store.
               </li>
-              <li></li>
             </ul>
           </li>
           <li>
@@ -107,7 +106,6 @@ const ReduxNotes = () => {
                 These are used to read the data from the store which can be used
                 to modify the react component.
               </li>
-              <li></li>
             </ul>
           </li>
           <li>

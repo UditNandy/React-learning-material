@@ -43,6 +43,7 @@ import ProgressBar from "./components/machine-coding/progress-bar/progress-bar.j
 import MachineCoding from "./components/machine-coding/machine-coding.js";
 import Performance from "./components/system-design/performance.js";
 import ServiceWorkers from "./components/system-design/service-workers.js";
+import PWA from "./components/system-design/progressive-web-app.js";
 function App() {
   return (
     <div className="view-page">
@@ -131,6 +132,9 @@ function App() {
             <MenuItem component={<Link to="/security" />}>Security</MenuItem>
             <MenuItem component={<Link to="/service-workers" />}>
               Service Workers
+            </MenuItem>
+            <MenuItem component={<Link to="/pwa" />}>
+              Progressive Web Apps
             </MenuItem>
           </SubMenu>
           <SubMenu label="DSA">
@@ -221,6 +225,7 @@ function App() {
           <Route path="machine-coding-question" element={<MachineCoding />} />
           <Route path="performance" element={<Performance />} />
           <Route path="service-workers" element={<ServiceWorkers />} />
+          <Route path="pwa" element={<PWA />} />
         </Routes>
       </div>
     </div>
