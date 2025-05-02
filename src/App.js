@@ -44,6 +44,7 @@ import MachineCoding from "./components/machine-coding/machine-coding.js";
 import Performance from "./components/system-design/performance.js";
 import ServiceWorkers from "./components/system-design/service-workers.js";
 import PWA from "./components/system-design/progressive-web-app.js";
+import LinkedList from "./components/dsa/linked-list.js";
 function App() {
   return (
     <div className="view-page">
@@ -151,6 +152,9 @@ function App() {
             </MenuItem>
             <MenuItem component={<Link to="/dp" />}>DP</MenuItem>
             <MenuItem component={<Link to="/graph" />}>Graph</MenuItem>
+            <MenuItem component={<Link to="/linkedlist" />}>
+              Linked List
+            </MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding">
             <MenuItem component={<Link to="/machine-coding-question" />}>
@@ -226,6 +230,7 @@ function App() {
           <Route path="performance" element={<Performance />} />
           <Route path="service-workers" element={<ServiceWorkers />} />
           <Route path="pwa" element={<PWA />} />
+          <Route path="linkedlist" element={<LinkedList />} />
         </Routes>
       </div>
     </div>
