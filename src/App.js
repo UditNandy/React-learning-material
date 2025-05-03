@@ -45,6 +45,7 @@ import Performance from "./components/system-design/performance.js";
 import ServiceWorkers from "./components/system-design/service-workers.js";
 import PWA from "./components/system-design/progressive-web-app.js";
 import LinkedList from "./components/dsa/linked-list.js";
+import Contest from "./components/dsa/contest.js";
 function App() {
   return (
     <div className="view-page">
@@ -155,6 +156,9 @@ function App() {
             <MenuItem component={<Link to="/linkedlist" />}>
               Linked List
             </MenuItem>
+            <MenuItem component={<Link to="/contest-questions" />}>
+              Contest Questions
+            </MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding">
             <MenuItem component={<Link to="/machine-coding-question" />}>
@@ -231,6 +235,7 @@ function App() {
           <Route path="service-workers" element={<ServiceWorkers />} />
           <Route path="pwa" element={<PWA />} />
           <Route path="linkedlist" element={<LinkedList />} />
+          <Route path="contest-questions" element={<Contest />} />
         </Routes>
       </div>
     </div>
