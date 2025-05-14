@@ -3,6 +3,11 @@ import Accordian from "../shared/accordian/accordian";
 const Graph = () => {
   return (
     <>
+      <Accordian header="BFS">
+        <ol>
+          <li>Diagonal Traverse II ✅</li>
+        </ol>
+      </Accordian>
       <Accordian header="Graph">
         <ol>
           <li>Friend Circles (DFS)</li>

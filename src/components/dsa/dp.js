@@ -3,7 +3,60 @@ import Accordian from "../shared/accordian/accordian";
 const DP = () => {
   return (
     <>
-      <Accordian header="Intution"></Accordian>
+      <Accordian header="Intution">
+        <ul>
+          <li>
+            Subset sum equal to target
+            <ul>
+              <li>
+                Here you need to traverse the index from n-1 to 0 and target
+                also from 0 to target.
+              </li>
+              <li>
+                Here handle the base case in terms of <strong>i===0</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Longest Common Subsequence along its DP table
+            <ul>
+              <li>
+                Here you will check for <strong>{"index<0 i.e -1"}</strong>
+              </li>
+              <li>
+                For tablulation we need to shift the index like -1 will be
+                converted to 0.
+              </li>
+              <li>
+                So the dp table will give the value from{" "}
+                <strong>i+1 and j+1</strong>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Longest Increasing Subsequence (Recusion, dp+hash , binary search).
+            <ul>
+              <li>
+                <strong>Tabulation</strong> : Here we need to find the longest
+                increasing subsequence which can be made until the index i. So
+                we can easily use a nested loop which will keep on checking the
+                previous indices max values. Now to print the subsequence we can
+                have a hash table initialised with -1 all where we can keep the
+                indices from where the current subsequence is formed. We can
+                have a maxValue and maxIdx to find the result.
+              </li>
+              <li>
+                <strong>Binary Search</strong> : So here we will be having a
+                result where result[0] = nums[0]. Here we will run a loop from 1
+                to n and for all values of nums if we found a value larger then
+                last value of res we will push it to res. Else we will replace
+                the value with its upperbound in res. To find upper bound we
+                will use binary search.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Accordian>
       <Accordian header="DP">
         <ol>
           <li>

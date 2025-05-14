@@ -34,6 +34,9 @@ const LinkedList = () => {
         <ol>
           <li>Reverse Nodes in k-Group ✅</li>
           <li>Swap Nodes in Pairs ✅</li>
+          <li>
+            Merge k Sorted Lists ✅ : Use priority queue for better complexity.
+          </li>
         </ol>
       </Accordian>
     </>

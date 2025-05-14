@@ -3,8 +3,21 @@ import Accordian from "../shared/accordian/accordian";
 const SlidingWindow = () => {
   return (
     <>
-      <Accordian header={"Intution"}></Accordian>
-      <Accordian header={"Question"}>
+      <Accordian header="Easy">
+        <ol>
+          <li>Longest Substring Without Repeating Characters ✅</li>
+          <li>Max Consecutive Ones III ✅</li>
+          <li>longest repeating character replacement ✅</li>
+          <li>
+            Binary subarray with sum : Remeber if any question comes where we
+            need to find equal to k then we can do count(k) - count(k-1) ✅
+          </li>
+          <li>Count Number of Nice Subarrays</li>
+          <li>Number of Substrings Containing All Three Characters ✅</li>
+          <li>Maximum Points You Can Obtain from Cards ✅</li>
+        </ol>
+      </Accordian>
+      <Accordian header="Additional Questions">
         <ol>
           <li>
             <strong>Arithmetic Slices (Leetcode - 413)</strong> ✅
