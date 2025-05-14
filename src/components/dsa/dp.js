@@ -6,7 +6,7 @@ const DP = () => {
       <Accordian header="Intution">
         <ul>
           <li>
-            Subset sum equal to target
+            <strong>Subset sum equal to target</strong>
             <ul>
               <li>
                 Here you need to traverse the index from n-1 to 0 and target
@@ -18,7 +18,7 @@ const DP = () => {
             </ul>
           </li>
           <li>
-            Longest Common Subsequence along its DP table
+            <strong>Longest Common Subsequence along its DP table</strong>
             <ul>
               <li>
                 Here you will check for <strong>{"index<0 i.e -1"}</strong>
@@ -34,7 +34,9 @@ const DP = () => {
             </ul>
           </li>
           <li>
-            Longest Increasing Subsequence (Recusion, dp+hash , binary search).
+            <strong>
+              Longest Increasing Subsequence (Recusion, dp+hash , binary search)
+            </strong>
             <ul>
               <li>
                 <strong>Tabulation</strong> : Here we need to find the longest
