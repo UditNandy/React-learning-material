@@ -46,6 +46,10 @@ import ServiceWorkers from "./components/system-design/service-workers.js";
 import PWA from "./components/system-design/progressive-web-app.js";
 import LinkedList from "./components/dsa/linked-list.js";
 import Contest from "./components/dsa/contest.js";
+import Instagram from "./components/hld/instagram.js";
+import Overview from "./components/hld/overview.js";
+import LoggingMonitoring from "./components/system-design/logging-monitoring.js";
+import Observers from "./components/js-concepts/observers.js";
 function App() {
   return (
     <div className="view-page">
@@ -138,6 +142,9 @@ function App() {
             <MenuItem component={<Link to="/pwa" />}>
               Progressive Web Apps
             </MenuItem>
+            <MenuItem component={<Link to="/logging-monitoring" />}>
+              Logging and Monitoring
+            </MenuItem>
           </SubMenu>
           <SubMenu label="DSA">
             <MenuItem component={<Link to="/array" />}>Array</MenuItem>
@@ -160,7 +167,10 @@ function App() {
               Contest Questions
             </MenuItem>
           </SubMenu>
-          <SubMenu label="Machine Coding">
+          <SubMenu label="Javascript Advance Concepts">
+            <MenuItem component={<Link to="/observers" />}>Observers</MenuItem>
+          </SubMenu>
+          <SubMenu label="Machine Coding (LLD)">
             <MenuItem component={<Link to="/machine-coding-question" />}>
               Important Question
             </MenuItem>
@@ -179,6 +189,12 @@ function App() {
             </MenuItem>
             <MenuItem component={<Link to="/progress-bar" />}>
               Progress Bar
+            </MenuItem>
+          </SubMenu>
+          <SubMenu label="HLD">
+            <MenuItem component={<Link to="/hld" />}>Overview</MenuItem>
+            <MenuItem component={<Link to="/hld/instagram" />}>
+              Instagram
             </MenuItem>
           </SubMenu>
           <MenuItem component={<Link to="/interview-questions" />}>
@@ -236,6 +252,12 @@ function App() {
           <Route path="pwa" element={<PWA />} />
           <Route path="linkedlist" element={<LinkedList />} />
           <Route path="contest-questions" element={<Contest />} />
+          <Route path="logging-monitoring" element={<LoggingMonitoring />} />
+          <Route path="observers" element={<Observers />} />
+          <Route path="hld">
+            <Route index path="" element={<Overview />} />
+            <Route path="instagram" element={<Instagram />} />
+          </Route>
         </Routes>
       </div>
     </div>

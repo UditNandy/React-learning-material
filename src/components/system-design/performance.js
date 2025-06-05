@@ -118,7 +118,7 @@ const Performance = () => {
             like loading and rendering the page.
             <ul>
               <li>
-                <strong>Time to first byte ()TTFB </strong> : How much time it
+                <strong>Time to first byte (TTFB) </strong> : How much time it
                 took to get the first byte from server.
               </li>
               <li>

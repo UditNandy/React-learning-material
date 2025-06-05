@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./accordian.css";
 
-export const Accordian = ({ header, children }) => {
+export const Accordian = ({ header, children, checkOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    checkOpen(isOpen);
+  }, [isOpen]);
 
   return (
     <div className="wrapper">
