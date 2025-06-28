@@ -17,6 +17,7 @@ const ReduxNotes = () => {
       <Accordian header="Redux">
         <ul>
           <li>It is not a mandatory stuff.</li>
+          <li>Its a predictable state container for Javascript apps.</li>
           <li>It is a organised way/pattern to handle state.</li>
           <li>It should be avoided in small applications.</li>
           <li>
@@ -141,6 +142,32 @@ const ReduxNotes = () => {
           <li>
             You can add as many middlewares as you want and they will be
             executed in the order they are placed in array.
+          </li>
+        </ul>
+      </Accordian>
+      <Accordian header={"Redux Thunk"}>
+        <ul>
+          <li>
+            It is a middleware for Redux that allows you to write async logic
+            (like API calls) in your action creators.
+          </li>
+          <li>
+            Normally, Redux actions must be plain JavaScript objects, but with
+            Redux Thunk, we can dispatch functions (thunks) instead of just
+            objects.
+          </li>
+          <li>It is like dispatching a function instead of a object.</li>
+          <li>
+            The thunk middleware checks for the type of action.
+            <ul>
+              <li>If its a function it executes it</li>
+              <li>Else it executes the next method.</li>
+            </ul>
+          </li>
+          <li>Redux thunks comes preconfigured in redux toolkit.</li>
+          <li>
+            While adding middlewares we need to concat it with getDefault
+            middlewares or it will even work if we dont have any middleware.
           </li>
         </ul>
       </Accordian>

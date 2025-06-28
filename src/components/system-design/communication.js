@@ -3,6 +3,13 @@ import Accordian from "../shared/accordian/accordian";
 const Communication = () => {
   return (
     <>
+      <Accordian header="Communication Protocols">
+        <img
+          height="800px"
+          width="800px"
+          src="./assets/icons/communication-protocols.png"
+        ></img>
+      </Accordian>
       <Accordian header="Short Polling">
         <ul>
           <li>

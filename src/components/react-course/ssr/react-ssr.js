@@ -15,7 +15,7 @@ export const ReactSSR = () => {
             would have a jsx inside root tag.
           </li>
           <li>
-            We have to use ReaceDOMServer.renderToString() method which takes a
+            We have to use ReactDOMServer.renderToString() method which takes a
             JSX and returns a stringify or prerendered version of html which can
             be sent to the client as a part of server response.
           </li>

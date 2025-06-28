@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./accordian.css";
 
-export const Accordian = ({ header, children, checkOpen }) => {
+export const Accordian = ({ header, children, checkOpen = (val) => {} }) => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     checkOpen(isOpen);

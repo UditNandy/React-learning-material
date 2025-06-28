@@ -37,7 +37,7 @@ const Folder = ({ explorerData, deleteFolder }) => {
             setIsHidden((prev) => !prev);
           }}
         >
-          <div>📁{explorerData.name}</div>
+          <div>📁 {explorerData.name}</div>
           <div>
             <button onClick={addFolder}>+ Folder</button>
             <button onClick={addFile}>+ File</button>

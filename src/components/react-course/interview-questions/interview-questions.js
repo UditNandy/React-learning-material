@@ -127,7 +127,10 @@ const InterviewQuestion = () => {
               <li>
                 <strong>rel</strong> : stands for relation
               </li>
-              <li>common values are stylesheet, icon, preload, etc.</li>
+              <li>
+                common values are stylesheet, icon, preload, prefetch,
+                dns-prefetch etc.
+              </li>
             </ul>
           </li>
           <li>

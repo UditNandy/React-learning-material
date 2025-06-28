@@ -50,6 +50,7 @@ import Instagram from "./components/hld/instagram.js";
 import Overview from "./components/hld/overview.js";
 import LoggingMonitoring from "./components/system-design/logging-monitoring.js";
 import Observers from "./components/js-concepts/observers.js";
+import FormikExample from "./components/formik-example/formik-example.js";
 function App() {
   return (
     <div className="view-page">
@@ -94,6 +95,9 @@ function App() {
             </MenuItem>
           </SubMenu>
           <MenuItem component={<Link to="/react-ssr" />}>React SSR</MenuItem>
+          <MenuItem component={<Link to="/formik-example" />}>
+            Formik Example
+          </MenuItem>
           <SubMenu label="Redux">
             <MenuItem component={<Link to="/redux-intro" />}>
               Redux Intro
@@ -254,6 +258,7 @@ function App() {
           <Route path="contest-questions" element={<Contest />} />
           <Route path="logging-monitoring" element={<LoggingMonitoring />} />
           <Route path="observers" element={<Observers />} />
+          <Route path="formik-example" element={<FormikExample />}></Route>
           <Route path="hld">
             <Route index path="" element={<Overview />} />
             <Route path="instagram" element={<Instagram />} />
