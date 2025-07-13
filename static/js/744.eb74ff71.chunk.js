@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_practice=self.webpackChunkreact_practice||[]).push([[744],{744:(e,a,c)=>{c.r(a),c.d(a,{default:()=>s});var r=c(579);const s=()=>(0,r.jsx)("div",{className:"wrapper",children:"This is a example component for lazy loading"})}}]);
+//# sourceMappingURL=744.eb74ff71.chunk.js.map
