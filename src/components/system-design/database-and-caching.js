@@ -73,7 +73,7 @@ const DatabaseAndCaching = () => {
         <ul>
           <li>Has apis like getItem, setItem, removeItem, clear.</li>
           <li>Size of 5mb per domain</li>
-          <li>Synchrnous</li>
+          <li>Synchronous</li>
           <li>
             Data gets cleared when browser session ends or tab/window closes.
           </li>
@@ -127,7 +127,7 @@ const DatabaseAndCaching = () => {
             It stores data in key value pair and value is again a string
             semicolon seperated.
           </li>
-          <li>Recommende to use sameSite attibute, domain/path config</li>
+          <li>Recommended to use sameSite attibute, domain/path config</li>
           <li>Can use for auth tokens, user preference, etc</li>
           <li>Not suitable for large data.</li>
           <li>

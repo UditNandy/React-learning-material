@@ -109,7 +109,7 @@ const ServiceWorkers = () => {
         <ul>
           <li>
             The idea behind this is whenever our page loads we can cache the
-            page in ou browser cache storage.
+            page in our browser cache storage.
           </li>
           <li>We can do it inside the install event.</li>
           <li>

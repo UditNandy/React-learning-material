@@ -88,7 +88,7 @@ const Performance = () => {
           <li>
             <strong>FID (First Input Delay)</strong> : The delay between first
             interaction(click,hoker,etc) and getting the 1st response of that
-            activity. Delayt between 1st input and 1st output.
+            activity. Delay between 1st input and 1st output.
           </li>
           <li>
             <strong>CLS (Cumulative Layout Shift)</strong> : While consuming the
@@ -288,7 +288,7 @@ const Performance = () => {
           ></img>
           <ul>
             <li>
-              WJavascript is parser block so when html will encounter a script
+              Javascript is parser block so when html will encounter a script
               tag it will pause parsing html file and it will download the
               script file then parse it and once the js parsing is done it will
               resume parsing HTML file.
@@ -322,7 +322,7 @@ const Performance = () => {
             </li>
             <li>
               We can see that suppose we try to load flipkart.com using http
-              then also in networ k tab all the requests are of https and not a
+              then also in network tab all the requests are of https and not a
               single request is made using http.
             </li>
             <li>Most of the browsers have a list HSTS preload lists.</li>
