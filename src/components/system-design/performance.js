@@ -498,6 +498,7 @@ const Performance = () => {
           </ul>
         </Accordian>
       </Accordian>
+      <Accordian header="Import on Interaction vs Import of Visibility"></Accordian>
       <Accordian header="Interview Questions">
         <ul>
           <li>How lighthouse is different from core web vitals.</li>

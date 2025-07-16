@@ -18,9 +18,9 @@ export const Accordian = ({ header, children, checkOpen = (val) => {} }) => {
         <div className="accordian-heading">{header}</div>
         <div>
           {isOpen ? (
-            <img src="./assets/icons/up-arrow.svg" alt="^" />
+            <img src="./up-arrow.svg" alt="^" />
           ) : (
-            <img src="./assets/icons/down-arrow.svg" alt="v" />
+            <img src="./down-arrow.svg" alt="v" />
           )}
         </div>
       </div>

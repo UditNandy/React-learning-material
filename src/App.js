@@ -51,6 +51,8 @@ import Overview from "./components/hld/overview.js";
 import LoggingMonitoring from "./components/system-design/logging-monitoring.js";
 import Observers from "./components/js-concepts/observers.js";
 import FormikExample from "./components/formik-example/formik-example.js";
+import Accessibility from "./components/system-design/accessibility.js";
+import AdvanceJavascript from "./components/js-concepts/advance-javascript.js";
 function App() {
   return (
     <div className="view-page">
@@ -140,6 +142,9 @@ function App() {
               Performance
             </MenuItem>
             <MenuItem component={<Link to="/security" />}>Security</MenuItem>
+            <MenuItem component={<Link to="/accessibility" />}>
+              Accessibility
+            </MenuItem>
             <MenuItem component={<Link to="/service-workers" />}>
               Service Workers
             </MenuItem>
@@ -173,6 +178,9 @@ function App() {
           </SubMenu>
           <SubMenu label="Javascript Advance Concepts">
             <MenuItem component={<Link to="/observers" />}>Observers</MenuItem>
+            <MenuItem component={<Link to="/advance-js" />}>
+              Advance Js
+            </MenuItem>
           </SubMenu>
           <SubMenu label="Machine Coding (LLD)">
             <MenuItem component={<Link to="/machine-coding-question" />}>
@@ -259,6 +267,8 @@ function App() {
           <Route path="logging-monitoring" element={<LoggingMonitoring />} />
           <Route path="observers" element={<Observers />} />
           <Route path="formik-example" element={<FormikExample />}></Route>
+          <Route path="accessibility" element={<Accessibility />}></Route>
+          <Route path="advance-js" element={<AdvanceJavascript />}></Route>
           <Route path="hld">
             <Route index path="" element={<Overview />} />
             <Route path="instagram" element={<Instagram />} />
